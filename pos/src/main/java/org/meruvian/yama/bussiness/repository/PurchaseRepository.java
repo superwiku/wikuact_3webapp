@@ -1,6 +1,6 @@
-package bussiness.repository;
+package org.meruvian.yama.bussiness.repository;
 
-import bussiness.entity.Purchase;
+import org.meruvian.yama.bussiness.entity.Purchase;
 import org.springframework.data.repository.CrudRepository;
 
 public interface PurchaseRepository extends CrudRepository<Purchase, Long>{

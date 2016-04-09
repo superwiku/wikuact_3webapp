@@ -8,7 +8,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-import bussiness.entity.Purchase;
+import org.meruvian.yama.bussiness.entity.Purchase;
 
 
 public interface PurchaseService {

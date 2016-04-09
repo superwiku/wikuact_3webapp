@@ -2,11 +2,10 @@ package org.meruvian.yama.webapi.service.sales;
 
 import javax.inject.Inject;
 
+import org.meruvian.yama.bussiness.entity.Sales;
+import org.meruvian.yama.bussiness.repository.SalesRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import bussiness.entity.Sales;
-import bussiness.repository.SalesRepository;
 
 @Service
 @Transactional(readOnly = true)

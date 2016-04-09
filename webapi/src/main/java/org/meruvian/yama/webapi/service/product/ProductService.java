@@ -12,7 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
 
-import bussiness.entity.Product;
+import org.meruvian.yama.bussiness.entity.Product;
 
 
 

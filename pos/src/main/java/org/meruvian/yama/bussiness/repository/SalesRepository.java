@@ -1,6 +1,6 @@
-package bussiness.repository;
+package org.meruvian.yama.bussiness.repository;
 
-import bussiness.entity.Sales;
+import org.meruvian.yama.bussiness.entity.Sales;
 import org.springframework.data.repository.CrudRepository;
 
 public interface SalesRepository extends CrudRepository<Sales, Long>{

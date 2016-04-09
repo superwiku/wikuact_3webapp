@@ -1,4 +1,4 @@
-package bussiness.entity;
+package org.meruvian.yama.bussiness.entity;
 
 import java.math.BigDecimal;
 import java.util.List;
