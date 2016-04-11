@@ -28,10 +28,12 @@ public class Product {
 	@Column(name="PRICE", nullable=false, precision=18, scale=0)
 	private BigDecimal price;
 	
+	@SuppressWarnings("deprecation")
 	@OneToMany(mappedBy="product", cascade=CascadeType.ALL)
 	@Cascade(org.hibernate.annotations.CascadeType.DELETE_ORPHAN)
 	private List<SalesDetail> salesdetail;
 	
+	@SuppressWarnings("deprecation")
 	@OneToMany(mappedBy="product", cascade=CascadeType.ALL)
 	@Cascade(org.hibernate.annotations.CascadeType.DELETE_ORPHAN)
 	private List<PurchaseDetail> purchasedetail;

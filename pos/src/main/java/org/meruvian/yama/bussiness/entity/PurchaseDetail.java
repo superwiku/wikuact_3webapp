@@ -32,9 +32,7 @@ public class PurchaseDetail {
 	@JoinColumn(name="PRODUCT_ID", nullable=false)
 	private Product product;
 	
-	@ManyToOne
-	@JoinColumn(name="PURCHASE_ID", nullable=false)
-	private Purchase purchase;
+	
 
 	public Long getId() {
 		return id;
@@ -76,13 +74,7 @@ public class PurchaseDetail {
 		this.product = product;
 	}
 
-	public Purchase getPurchase() {
-		return purchase;
-	}
-
-	public void setPurchase(Purchase purchase) {
-		this.purchase = purchase;
-	}
+	
 	
 	
 

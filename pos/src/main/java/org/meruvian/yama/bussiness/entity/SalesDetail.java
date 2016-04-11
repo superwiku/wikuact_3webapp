@@ -31,9 +31,7 @@ public class SalesDetail {
 	@Column(name="SUBTOTAL", nullable=false, precision=18, scale=0)
 	private BigDecimal subtotal;
 	
-	@ManyToOne
-	@JoinColumn(name="SALES_ID", nullable=false)
-	private Sales sales;
+	
 
 	public Long getId() {
 		return id;
@@ -75,14 +73,5 @@ public class SalesDetail {
 		this.subtotal = subtotal;
 	}
 
-	public Sales getSales() {
-		return sales;
-	}
-
-	public void setSales(Sales sales) {
-		this.sales = sales;
-	}
 	
-	
-
 }
