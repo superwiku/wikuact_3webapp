@@ -33,7 +33,6 @@ public class Purchase {
 	private BigDecimal totalpurchase;
 	
 	@OneToMany(mappedBy="purchase", cascade=CascadeType.ALL)
-	@Cascade(org.hibernate.annotations.CascadeType.DELETE_ORPHAN)
 	private List<PurchaseDetail> purchasedetail;
 
 	public Long getId() {

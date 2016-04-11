@@ -17,7 +17,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.Product;
 
-@Path("/T_PRODUCT")
+@Path("api/pos")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public interface ProductService {

@@ -30,12 +30,10 @@ public class Product {
 	
 	@SuppressWarnings("deprecation")
 	@OneToMany(mappedBy="product", cascade=CascadeType.ALL)
-	@Cascade(org.hibernate.annotations.CascadeType.DELETE_ORPHAN)
 	private List<SalesDetail> salesdetail;
 	
 	@SuppressWarnings("deprecation")
 	@OneToMany(mappedBy="product", cascade=CascadeType.ALL)
-	@Cascade(org.hibernate.annotations.CascadeType.DELETE_ORPHAN)
 	private List<PurchaseDetail> purchasedetail;
 
 	public Long getId() {
