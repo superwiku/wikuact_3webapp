@@ -22,6 +22,10 @@ public class SalesDetail {
 	@JoinColumn(name="PRODUCT_ID", nullable=false)
 	private Product product;
 	
+	@ManyToOne
+	@JoinColumn(name="SALES_ID", nullable=false)
+	private Sales sales;
+	
 	@Column(name="QUANTITY", nullable=false)
 	private Integer quantity;
 	
@@ -71,6 +75,14 @@ public class SalesDetail {
 
 	public void setSubTotal(BigDecimal subtotal) {
 		this.subtotal = subtotal;
+	}
+
+	public Sales getSales() {
+		return sales;
+	}
+
+	public void setSales(Sales sales) {
+		this.sales = sales;
 	}
 
 	
