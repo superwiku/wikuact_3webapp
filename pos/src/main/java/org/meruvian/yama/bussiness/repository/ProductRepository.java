@@ -5,7 +5,9 @@ import java.util.List;
 import org.meruvian.yama.bussiness.entity.Product;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ProductRepository extends CrudRepository<Product, Long>{
 	
 	Product findById(long id);
