@@ -8,7 +8,7 @@
 	<property name="now" value="now()" dbms="mysql,h2"/>
     <property name="now" value="current_timestamp" dbms="postgresql"/>
 	
-	<changeSet id="0001" author="yama">
+	<changeSet id="0002" author="yama">
 		<createTable tableName="yama_backend_user">
 			<column name="id" type="varchar(50)">
 				<constraints primaryKey="true" nullable="false" />
@@ -149,60 +149,21 @@
 			<column name="size" type="bigint(20)" />
 		</createTable>
 		
-		<addForeignKeyConstraint constraintName="fk_user_role_user_id"
-			baseTableName="yama_user_role"
-			baseColumnNames="user_id"
-			referencedTableName="yama_backend_user" 
-			referencedColumnNames="id" />
-		
-		<addForeignKeyConstraint constraintName="fk_user_role_role_id"
-			baseTableName="yama_user_role"
-			baseColumnNames="role_id"
-			referencedTableName="yama_workflow_role" 
-			referencedColumnNames="id" />
+		<addForeignKeyConstraint constraintName="fk_purchase_detail_product_id"
+			baseTableName="T_PURCHASE_DETAIL" baseColumnNames="PRODUCT_ID"
+			referencedTableName="T_PRODUCT" referencedColumnNames="ID" />
 			
-		<addUniqueConstraint columnNames="user_id, role_id" 
-			tableName="yama_user_role" />
-		
-		<addForeignKeyConstraint constraintName="fk_approval_application_id"
-			baseTableName="yama_oauth_application_approval"
-			baseColumnNames="application_id"
-			referencedTableName="yama_application" 
-			referencedColumnNames="id" />
+		<addForeignKeyConstraint constraintName="fk_purchase_detail_purchase_id"
+			baseTableName="T_PURCHASE_DETAIL" baseColumnNames="PURCHASE_ID"
+			referencedTableName="T_PURCHASE" referencedColumnNames="ID" />
 			
-		<addUniqueConstraint columnNames="application_id, create_by, scope"
-			tableName="yama_oauth_application_approval"/>
-		
-		<addForeignKeyConstraint constraintName="fk_social_user_id"
-			baseTableName="yama_social_connection"
-			baseColumnNames="user_id"
-			referencedTableName="yama_backend_user" 
-			referencedColumnNames="id" />
+		<addForeignKeyConstraint constraintName="fk_sales_product_id"
+			baseTableName="T_SALES_DETAIL" baseColumnNames="PRODUCT_ID"
+			referencedTableName="T_PRODUCT" referencedColumnNames="ID" />
 			
-		<addUniqueConstraint columnNames="user_id, provider, rank"
-			tableName="yama_social_connection"/>
-		
-		<addUniqueConstraint columnNames="user_id, provider, provider_user_id"
-			tableName="yama_social_connection"/>
-		
-		<addForeignKeyConstraint constraintName="fk_user_file_info_id"
-			baseTableName="yama_backend_user"
-			baseColumnNames="file_info_id"
-			referencedTableName="yama_file_info" 
-			referencedColumnNames="id" />
+		<addForeignKeyConstraint constraintName="fk_sales_detail_sales_id"
+			baseTableName="T_SALES_DETAIL" baseColumnNames="SALES_ID"
+			referencedTableName="T_SALES" referencedColumnNames="ID" />
 			
-		<loadData tableName="yama_backend_user" file="db/users.csv" 
-			encoding="UTF-8" separator=";" />
-		
-		<loadData tableName="yama_workflow_role" file="db/roles.csv" 
-			encoding="UTF-8" separator=";" />
-			
-		<loadData tableName="yama_user_role" file="db/users_roles.csv" 
-			encoding="UTF-8" separator=";" />
-			
-		<loadData tableName="yama_application" file="db/applications.csv" 
-			encoding="UTF-8" separator=";">
-			<column name="auto_approve" type="boolean" />
-		</loadData>
 	</changeSet>
 </databaseChangeLog>
