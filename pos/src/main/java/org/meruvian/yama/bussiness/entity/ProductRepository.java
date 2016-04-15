@@ -1,8 +1,7 @@
-package org.meruvian.yama.bussiness.repository;
+package org.meruvian.yama.bussiness.entity;
 
 import java.util.List;
 
-import org.meruvian.yama.bussiness.entity.Product;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

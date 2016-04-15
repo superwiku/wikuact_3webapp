@@ -3,7 +3,7 @@ package org.meruvian.yama.webapi.service.purchase;
 import javax.inject.Inject;
 
 import org.meruvian.yama.bussiness.entity.Purchase;
-import org.meruvian.yama.bussiness.repository.PurchaseRepository;
+import org.meruvian.yama.bussiness.entity.PurchaseRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,7 +1,6 @@
-package org.meruvian.yama.bussiness.repository;
+package org.meruvian.yama.bussiness.entity;
 
 
-import org.meruvian.yama.bussiness.entity.SalesDetail;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
