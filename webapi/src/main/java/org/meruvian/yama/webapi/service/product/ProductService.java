@@ -1,5 +1,6 @@
 package org.meruvian.yama.webapi.service.product;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -30,6 +31,9 @@ public interface ProductService {
 	
 	@GET
 	List<Product> findProductByName(@QueryParam("name") @DefaultValue("") String name);
+	
+	@GET
+	List<Product> findProductByNameAndPrice(@QueryParam("name,price") @DefaultValue("") String name,BigDecimal price);
 	
 	@POST
 	@OPTIONS

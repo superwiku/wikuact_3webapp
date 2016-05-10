@@ -1,5 +1,6 @@
 package org.meruvian.yama.webapi.service.product;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -22,8 +23,13 @@ public class RestProductService implements ProductService{
 	}
 	
 	@Override
+	public List<Product> findProductByNameAndPrice(String name, BigDecimal price){
+		return productrepository.findByNameAndPrice(name, price);
+	}
+	
+	@Override
 	public Product getProductById(long id) {
-		return productrepository.findById(id);
+		return productrepository.getById(id);
 	}
 	
 	@Override

@@ -26,7 +26,7 @@ public class PurchaseDetail {
 	@Column(name="PRICE", nullable=false, precision=18, scale=0)
 	private BigDecimal price;
 	
-	@Column(name="PRICE", nullable=false, precision=18, scale=0)
+	@Column(name="PRICE_TOT", nullable=false, precision=18, scale=0)
 	private BigDecimal subtotal;
 	
 	@ManyToOne
