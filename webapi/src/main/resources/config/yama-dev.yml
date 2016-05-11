@@ -1,6 +1,6 @@
 spring:
     profiles: dev
-    jpa.hibernate.ddl-auto: update
+    jpa.hibernate.ddl-auto: validate
 server.port: 8080
 
 logging:

@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 import org.meruvian.yama.core.DefaultPersistence;
 
 @Entity
-@Table(name = "purchasedetail")
+@Table(name = "purchase_detail")
 public class PurchaseDetail extends DefaultPersistence {
 
 	private Integer quantity;

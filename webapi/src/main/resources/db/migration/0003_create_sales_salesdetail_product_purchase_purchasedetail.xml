@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
@@ -19,7 +18,7 @@
 			<column name="update_date" type="datetime" />
 			<column name="active_flag" type="int(10)" />
 			<column name="salesdate" type="Date"/>
-			<column name="totalsales" type="BigDecimal"/>
+			<column name="totalsales" type="Decimal"/>
 		</createTable>
 		<createTable tableName="sales_detail">
 			<column name="id" type="varchar(50)">
@@ -38,7 +37,7 @@
 			</column>
 			<column name="quantity" type="int(10)"/>
 			<column name="price" type="decimal"/>
-			<column name="subtotal" type="decimal"/>
+			<column name="sub_total" type="decimal"/>
 		</createTable>
 		<createTable tableName="product">
 			<column name="id" type="varchar(50)">
@@ -86,26 +85,26 @@
 		</createTable>
 		
 		<addForeignKeyConstraint constraintName="fk_salesdetail_salesid"
-			baseTableName ="salesdetail"
+			baseTableName ="sales_detail"
 			baseColumnNames ="sales_id"
 			referencedTableName ="sales"
-			referencedColumnNames ="id" ​/>
+			referencedColumnNames ="id"/>
 		<addForeignKeyConstraint constraintName="fk_salesdetail_productid"
-			baseTableName ="salesdetail"
+			baseTableName ="sales_detail"
 			baseColumnNames ="product_id"
 			referencedTableName ="product"
-			referencedColumnNames ="id" ​/>
+			referencedColumnNames ="id"/>
 			
 		<addForeignKeyConstraint constraintName="fk_purchasedetail_purchaseid"
-			baseTableName ="purchasedetail"
+			baseTableName ="purchase_detail"
 			baseColumnNames ="purchase_id"
 			referencedTableName ="purchase"
-			referencedColumnNames ="id" ​/>
+			referencedColumnNames ="id"/>
 			
 		<addForeignKeyConstraint constraintName="fk_purchasedetail_productid"
-			baseTableName ="purchasedetail"
+			baseTableName ="purchase_detail"
 			baseColumnNames ="product_id"
 			referencedTableName ="product"
-			referencedColumnNames ="id" ​/>
+			referencedColumnNames ="id"/>
 	</changeSet>
 </databaseChangeLog>
