@@ -1,12 +1,14 @@
 package org.meruvian.yama.webapi.service.product;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 import javax.inject.Inject;
 
 import org.meruvian.yama.bussiness.entity.Product;
 import org.meruvian.yama.bussiness.entity.ProductRepository;
+import org.meruvian.yama.core.LogInformation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,30 +20,28 @@ public class RestProductService implements ProductService{
 	private ProductRepository productrepository;
 	
 	@Override
-	public List<Product> findProductByName(String name) {
-		return productrepository.findByName(name);
+	public Page<Product> findProductByName(String name, Pageable pageable) {
+		return productrepository.findByName(name,LogInformation.ACTIVE,pageable);
 	}
 	
 	@Override
-	public List<Product> findProductByNameAndPrice(String name, BigDecimal price){
-		return productrepository.findByNameAndPrice(name, price);
+	public Page<Product> findProductByNameAndPrice(String name, BigDecimal price, Pageable pageable){
+		return productrepository.findByNameAndPrice(name, price, LogInformation.ACTIVE, pageable);
 	}
 	
 	@Override
-	public Product getProductById(long id) {
-		return productrepository.getById(id);
+	public Product getProductByBarcode(String barcode) {
+		return productrepository.getByBarcode(barcode);
 	}
 	
 	@Override
 	@Transactional
-	public Product updateProduct(long id, Product product) {
-		Product awal = getProductById(product.getId());
+	public Product updateProduct(Product product) {
+		Product awal = getProductByBarcode(product.getBarcode());
 		if (awal != null) {
 			awal.setName(product.getName());
 			awal.setPrice(product.getPrice());
-			
-		}
-		
+			}		
 		return awal;
 	}
 	
@@ -53,8 +53,9 @@ public class RestProductService implements ProductService{
 	
 	@Override
 	@Transactional
-	public void deleteProduct(long id) {
+	public void deleteProduct(String id) {
 		productrepository.delete(id);
 	}
 
+	
 }

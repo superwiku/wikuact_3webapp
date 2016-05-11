@@ -16,7 +16,7 @@ public class RestPurchaseDetailService implements PurchaseDetailService{
 	private PurchaseDetailRepository purchasedetailrepository;
 	
 	@Override
-	public PurchaseDetail getPurchaseDetailById(long id) {
+	public PurchaseDetail getPurchaseDetailById(String id) {
 		return purchasedetailrepository.findById(id);
 	}
 	
@@ -28,13 +28,13 @@ public class RestPurchaseDetailService implements PurchaseDetailService{
 	
 	@Override
 	@Transactional
-	public void deletePurchaseDetail(long id) {
+	public void deletePurchaseDetail(String id) {
 		purchasedetailrepository.delete(id);
 	}
 	
 	@Override
 	@Transactional
-	public PurchaseDetail updatePurchaseDetail(long id, PurchaseDetail purchasedetail) {
+	public PurchaseDetail updatePurchaseDetail(PurchaseDetail purchasedetail) {
 		PurchaseDetail awal = getPurchaseDetailById(purchasedetail.getId());
 		if (awal != null) {
 			awal.setQuantity(purchasedetail.getQuantity());

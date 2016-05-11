@@ -4,48 +4,22 @@ import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.meruvian.yama.core.DefaultPersistence;
 
 @Entity
-@Table(name="T_PURCHASE_DETAIL")
-public class PurchaseDetail {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID")
-	private Long id;
-	
-	@Column(name="QUANTITY")
+@Table(name = "purchasedetail")
+public class PurchaseDetail extends DefaultPersistence {
+
 	private Integer quantity;
-	
-	@Column(name="PRICE", nullable=false, precision=18, scale=0)
 	private BigDecimal price;
-	
-	@Column(name="PRICE_TOT", nullable=false, precision=18, scale=0)
 	private BigDecimal subtotal;
-	
-	@ManyToOne
-	@JoinColumn(name="PRODUCT_ID", nullable=false)
 	private Product product;
-	
-	@ManyToOne
-	@JoinColumn(name="PURCHASE_ID")
 	private Purchase purchase;
-	
-	
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public Integer getQuantity() {
 		return quantity;
@@ -71,6 +45,9 @@ public class PurchaseDetail {
 		this.subtotal = subtotal;
 	}
 
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "product_id")
 	public Product getProduct() {
 		return product;
 	}
@@ -79,6 +56,8 @@ public class PurchaseDetail {
 		this.product = product;
 	}
 
+	@ManyToOne
+	@JoinColumn(name="purchase_id")
 	public Purchase getPurchase() {
 		return purchase;
 	}

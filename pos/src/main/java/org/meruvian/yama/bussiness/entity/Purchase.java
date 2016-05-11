@@ -2,72 +2,38 @@ package org.meruvian.yama.bussiness.entity;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.Cascade;
+import org.meruvian.yama.core.DefaultPersistence;
 
 @Entity
-@Table(name="T_PURCHASE")
-public class Purchase {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID")
-	private Long id;
-	
-	@Temporal(TemporalType.DATE)
-	@Column(name="PURCHASE_DATE")
+@Table(name = "purchase")
+public class Purchase extends DefaultPersistence {
+
 	private Date purchasedate;
-	
-	@Column(name="TOTAL_PURCHASE", nullable=false, precision=18, scale=0)
 	private BigDecimal totalpurchase;
-	
-	@OneToMany(mappedBy="purchase", cascade=CascadeType.ALL)
-	private List<PurchaseDetail> purchasedetail;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Date getPurchaseDate() {
+	@Temporal(TemporalType.DATE)
+	public Date getPurchasedate() {
 		return purchasedate;
 	}
 
-	public void setPurchaseDate(Date purchasedate) {
+	public void setPurchasedate(Date purchasedate) {
 		this.purchasedate = purchasedate;
 	}
 
-	public BigDecimal getTotalPurchase() {
+	@Column(name="totalpurchase", nullable=false, precision=18, scale=0)
+	public BigDecimal getTotalpurchase() {
 		return totalpurchase;
 	}
 
-	public void setTotalPurchase(BigDecimal totalpurchase) {
+	public void setTotalpurchase(BigDecimal totalpurchase) {
 		this.totalpurchase = totalpurchase;
 	}
-
-	public List<PurchaseDetail> getPurchasedetail() {
-		return purchasedetail;
-	}
-
-	public void setPurchasedetail(List<PurchaseDetail> purchasedetail) {
-		this.purchasedetail = purchasedetail;
-	}
-	
-	
 
 }

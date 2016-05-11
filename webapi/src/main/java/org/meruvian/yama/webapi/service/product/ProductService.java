@@ -1,8 +1,6 @@
 package org.meruvian.yama.webapi.service.product;
 
 import java.math.BigDecimal;
-import java.util.List;
-
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
@@ -17,34 +15,34 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-@Path("api/pos")
+@Path("api/product")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public interface ProductService {
 	
-
-	@GET
-	@Path("/{id}")
-	
-	Product getProductById(@PathParam("id")  long id);
 	
 	@GET
-	List<Product> findProductByName(@QueryParam("name") @DefaultValue("") String name);
+	Product getProductByBarcode(@QueryParam("barcode")  String barcode);
 	
 	@GET
-	List<Product> findProductByNameAndPrice(@QueryParam("name,price") @DefaultValue("") String name,BigDecimal price);
+	Page<Product> findProductByName(@QueryParam("name") @DefaultValue("") String name, Pageable pageable);
+	
+	@GET
+	Page<Product> findProductByNameAndPrice(@QueryParam("name") @DefaultValue("") String name,@QueryParam("price") @DefaultValue("") BigDecimal price, Pageable pageable);
 	
 	@POST
 	@OPTIONS
 	Product saveProduct(Product product);
 	
 	@PUT
-	@Path("/{id}")
-	Product updateProduct(@PathParam("id")  long id, Product product);
+	@Path("/{productId}")
+	Product updateProduct(Product product);
 	
 	@DELETE
-	@Path("/{id}")
-	void deleteProduct(@PathParam("id")  long id);
+	@Path("/{productId}")
+	void deleteProduct(@PathParam("productId")  String productId);
 
 }

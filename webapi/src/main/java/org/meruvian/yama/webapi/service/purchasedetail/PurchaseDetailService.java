@@ -20,7 +20,7 @@ public interface PurchaseDetailService {
 	
 	@GET
 	@Path("/{id}")
-	PurchaseDetail getPurchaseDetailById(@PathParam("id")  long id);
+	PurchaseDetail getPurchaseDetailById(@PathParam("id")  String id);
 	
 	
 	@POST
@@ -29,10 +29,10 @@ public interface PurchaseDetailService {
 	
 	@PUT
 	@Path("/{id}")
-	PurchaseDetail updatePurchaseDetail(@PathParam("id")  long id, PurchaseDetail purchasedetail);
+	PurchaseDetail updatePurchaseDetail(PurchaseDetail purchasedetail);
 	
 	@DELETE
 	@Path("/{id}")
-	void deletePurchaseDetail(@PathParam("id")  long id);
+	void deletePurchaseDetail(@PathParam("id")  String id);
 
 }

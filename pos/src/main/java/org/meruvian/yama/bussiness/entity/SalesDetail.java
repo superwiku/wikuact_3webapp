@@ -4,48 +4,28 @@ import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.meruvian.yama.core.DefaultPersistence;
 
 @Entity
-@Table(name="T_SALES_DETAIL")
-public class SalesDetail {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID")
-	private Long id;
+@Table(name="salesdetail")
+public class SalesDetail extends DefaultPersistence{
 	
-	@ManyToOne
-	@JoinColumn(name="PRODUCT_ID", nullable=false)
+	
 	private Product product;
-	
-	@ManyToOne
-	@JoinColumn(name="SALES_ID", nullable=false)
-	private Sales sales;
-	
-	@Column(name="QUANTITY", nullable=false)
-	private Integer quantity;
-	
-	@Column(name="PRICE", nullable=false, precision=18, scale=0)
-	private BigDecimal price;
-	
-	@Column(name="SUBTOTAL", nullable=false, precision=18, scale=0)
+	private Sales sales;	
+	private Integer quantity;	
+	private BigDecimal price;	
 	private BigDecimal subtotal;
 	
 	
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name="product_id")
 	public Product getProduct() {
 		return product;
 	}
@@ -78,6 +58,9 @@ public class SalesDetail {
 		this.subtotal = subtotal;
 	}
 
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name="sales_id")
 	public Sales getSales() {
 		return sales;
 	}
@@ -86,5 +69,4 @@ public class SalesDetail {
 		this.sales = sales;
 	}
 
-	
 }

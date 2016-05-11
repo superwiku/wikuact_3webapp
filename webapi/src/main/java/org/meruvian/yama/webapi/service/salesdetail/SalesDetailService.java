@@ -20,7 +20,7 @@ public interface SalesDetailService {
 	
 	@GET
 	@Path("/{id}")
-	SalesDetail getSalesDetailById(@PathParam("id")  long id);
+	SalesDetail getSalesDetailById(@PathParam("id")  String id);
 	
 	
 	@POST
@@ -29,10 +29,10 @@ public interface SalesDetailService {
 	
 	@PUT
 	@Path("/{id}")
-	SalesDetail updateSalesDetail(@PathParam("id")  long id, SalesDetail salesdetail);
+	SalesDetail updateSalesDetail(@PathParam("id")  String id, SalesDetail salesdetail);
 	
 	@DELETE
 	@Path("/{id}")
-	void deleteSalesDetail(@PathParam("id")  long id);
+	void deleteSalesDetail(@PathParam("id")  String id);
 
 }

@@ -1,7 +1,11 @@
 package org.meruvian.yama.webapi.service.purchase;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.OPTIONS;
 import javax.ws.rs.POST;
@@ -9,9 +13,12 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.Purchase;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 
 @Path("api/pos")
@@ -21,8 +28,13 @@ public interface PurchaseService {
 	
 	@GET
 	@Path("/{id}")
-	Purchase getPurchaseById(@PathParam("id")  long id);
+	Purchase getPurchaseById(@PathParam("id")  String id);
 	
+	@GET
+	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedate") @DefaultValue("") Date purchasedatemin,@QueryParam("purchasedate") @DefaultValue("") Date purchasedatemax, Pageable pageable);
+	
+	@GET
+	Page<Purchase> findPurchaseByTotalpurchase(@QueryParam("totalpurchase") @DefaultValue("") BigDecimal totalpurchase, Pageable pageable);
 	
 	@POST
 	@OPTIONS
@@ -30,11 +42,11 @@ public interface PurchaseService {
 	
 	@PUT
 	@Path("/{id}")
-	Purchase updatePurchase(@PathParam("id")  long id, Purchase purchase);
+	Purchase updatePurchase(Purchase purchase);
 	
 	@DELETE
 	@Path("/{id}")
-	void deletePurchase(@PathParam("id")  long id);
+	void deletePurchase(@PathParam("id")  String id);
 			
 	
 }

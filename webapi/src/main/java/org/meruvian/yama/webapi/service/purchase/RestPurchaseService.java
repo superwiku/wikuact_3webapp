@@ -1,9 +1,15 @@
 package org.meruvian.yama.webapi.service.purchase;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.inject.Inject;
 
 import org.meruvian.yama.bussiness.entity.Purchase;
 import org.meruvian.yama.bussiness.entity.PurchaseRepository;
+import org.meruvian.yama.core.LogInformation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,17 +20,17 @@ public class RestPurchaseService implements PurchaseService {
 	private PurchaseRepository purchaserepository;
 	
 	@Override
-	public Purchase getPurchaseById(long id) {
+	public Purchase getPurchaseById(String id) {
 		return purchaserepository.findById(id);
 	}
 	
 	@Override
 	@Transactional
-	public Purchase updatePurchase(long id, Purchase purchase) {
+	public Purchase updatePurchase(Purchase purchase) {
 		Purchase awal = getPurchaseById(purchase.getId());
 		if (awal != null) {
-			awal.setPurchaseDate(purchase.getPurchaseDate());
-			awal.setTotalPurchase(purchase.getTotalPurchase());
+			awal.setPurchasedate(purchase.getPurchasedate());
+			awal.setTotalpurchase(purchase.getTotalpurchase());
 			
 		}
 		
@@ -39,8 +45,20 @@ public class RestPurchaseService implements PurchaseService {
 	
 	@Override
 	@Transactional
-	public void deletePurchase(long id) {
+	public void deletePurchase(String id) {
 		purchaserepository.delete(id);
+	}
+
+	@Override
+	public Page<Purchase> findPurchaseByPurchasedate(Date purchasedatemin, Date purchasedatemax, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return purchaserepository.findByPurchasedate(purchasedatemin, purchasedatemax, LogInformation.ACTIVE, pageable);
+	}
+
+	@Override
+	public Page<Purchase> findPurchaseByTotalpurchase(BigDecimal totalpurchase, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return purchaserepository.findByTotalpurchase(totalpurchase, LogInformation.ACTIVE, pageable);
 	}
 
 }

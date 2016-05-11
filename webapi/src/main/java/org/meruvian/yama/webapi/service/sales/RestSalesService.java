@@ -1,9 +1,14 @@
 package org.meruvian.yama.webapi.service.sales;
 
+import java.util.Date;
+
 import javax.inject.Inject;
 
 import org.meruvian.yama.bussiness.entity.Sales;
 import org.meruvian.yama.bussiness.entity.SalesRepository;
+import org.meruvian.yama.core.LogInformation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,17 +19,17 @@ public class RestSalesService implements SalesService{
 	private SalesRepository salesrepository;
 	
 	@Override
-	public Sales getSalesById(long id) {
-		return salesrepository.findById(id);
+	public Sales getSalesById(String id) {
+		return salesrepository.getById(id);
 	}
 	
 	@Override
 	@Transactional
-	public Sales updateSales(long id, Sales sales) {
+	public Sales updateSales(String id, Sales sales) {
 		Sales awal = getSalesById(sales.getId());
 		if (awal != null) {
-			awal.setSalesDate(sales.getSalesDate());
-			awal.setTotalSales(sales.getTotalSales());
+			awal.setSalesdate(sales.getSalesdate());
+			awal.setTotalsales(sales.getTotalsales());
 			
 		}
 		
@@ -39,8 +44,14 @@ public class RestSalesService implements SalesService{
 	
 	@Override
 	@Transactional
-	public void deleteSales(long id) {
+	public void deleteSales(String id) {
 		salesrepository.delete(id);
+	}
+
+	@Override
+	public Page<Sales> findSalesBySalesdate(Date salesdatemin,Date salesdatemax, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return salesrepository.findBySalesdate(salesdatemin, salesdatemax, LogInformation.ACTIVE, pageable);
 	}
 
 }

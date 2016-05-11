@@ -15,13 +15,13 @@ public class RestSalesDetailService implements SalesDetailService{
 	private SalesDetailRepository salesdetailrepository;
 	
 	@Override
-	public SalesDetail getSalesDetailById(long id) {
-		return salesdetailrepository.findById(id);
+	public SalesDetail getSalesDetailById(String id) {
+		return salesdetailrepository.getById(id);
 	}
 	
 	@Override
 	@Transactional
-	public SalesDetail updateSalesDetail(long id, SalesDetail salesdetail) {
+	public SalesDetail updateSalesDetail(String id, SalesDetail salesdetail) {
 		SalesDetail awal = getSalesDetailById(salesdetail.getId());
 		if (awal != null) {
 			awal.setProduct(salesdetail.getProduct());
@@ -42,7 +42,7 @@ public class RestSalesDetailService implements SalesDetailService{
 	
 	@Override
 	@Transactional
-	public void deleteSalesDetail(long id) {
+	public void deleteSalesDetail(String id) {
 		salesdetailrepository.delete(id);
 	}
 
