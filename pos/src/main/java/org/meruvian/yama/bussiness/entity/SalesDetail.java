@@ -2,7 +2,6 @@ package org.meruvian.yama.bussiness.entity;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -16,24 +15,12 @@ import org.meruvian.yama.core.DefaultPersistence;
 public class SalesDetail extends DefaultPersistence{
 	
 	
-	private Product product;
 	private Sales sales;	
 	private Integer quantity;	
 	private BigDecimal price;	
 	private BigDecimal subtotal;
 	
 	
-	@NotNull
-	@ManyToOne
-	@JoinColumn(name="product_id")
-	public Product getProduct() {
-		return product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-
 	public Integer getQuantity() {
 		return quantity;
 	}

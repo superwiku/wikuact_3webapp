@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import org.meruvian.yama.bussiness.entity.PurchaseDetail;
 import org.meruvian.yama.bussiness.entity.PurchaseDetailRepository;
+import org.meruvian.yama.core.LogInformation;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +18,7 @@ public class RestPurchaseDetailService implements PurchaseDetailService{
 	
 	@Override
 	public PurchaseDetail getPurchaseDetailById(String id) {
-		return purchasedetailrepository.findById(id);
+		return purchasedetailrepository.getById(id);
 	}
 	
 	@Override
@@ -29,7 +30,7 @@ public class RestPurchaseDetailService implements PurchaseDetailService{
 	@Override
 	@Transactional
 	public void deletePurchaseDetail(String id) {
-		purchasedetailrepository.delete(id);
+		getPurchaseDetailById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);
 	}
 	
 	@Override

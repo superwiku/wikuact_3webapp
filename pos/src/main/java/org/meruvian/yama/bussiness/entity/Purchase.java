@@ -17,7 +17,7 @@ public class Purchase extends DefaultPersistence {
 
 	private Date purchasedate;
 	private BigDecimal totalpurchase;
-
+	
 	@Temporal(TemporalType.DATE)
 	public Date getPurchasedate() {
 		return purchasedate;
@@ -36,4 +36,5 @@ public class Purchase extends DefaultPersistence {
 		this.totalpurchase = totalpurchase;
 	}
 
+	
 }

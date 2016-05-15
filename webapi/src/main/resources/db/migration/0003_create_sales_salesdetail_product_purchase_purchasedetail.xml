@@ -19,6 +19,9 @@
 			<column name="active_flag" type="int(10)" />
 			<column name="salesdate" type="Date"/>
 			<column name="totalsales" type="Decimal"/>
+			<column name="product_id" type="varchar(50)">
+				<constraints nullable="false"/>
+			</column>	
 		</createTable>
 		<createTable tableName="sales_detail">
 			<column name="id" type="varchar(50)">
@@ -29,9 +32,6 @@
 			<column name="update_by" type="varchar(50)" />
 			<column name="update_date" type="datetime" />
 			<column name="active_flag" type="int(10)" />
-			<column name="product_id" type="varchar(50)">
-				<constraints nullable="false"/>
-			</column>
 			<column name="sales_id" type="varchar(50)">
 				<constraints nullable="false"/>
 			</column>
@@ -106,5 +106,12 @@
 			baseColumnNames ="product_id"
 			referencedTableName ="product"
 			referencedColumnNames ="id"/>
+			
+		<addForeignKeyConstraint constraintName="fk_sales_productid"
+			baseTableName ="sales"
+			baseColumnNames ="product_id"
+			referencedTableName ="product"
+			referencedColumnNames ="id"/>
+				
 	</changeSet>
 </databaseChangeLog>

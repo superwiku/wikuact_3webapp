@@ -1,0 +1,578 @@
+2016-05-13 23:57:07,688 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-13 23:57:11,720 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-13 23:57:12,741 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-13 23:57:16,162 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-13 23:57:20,901 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /core/src/main/java
+2016-05-13 23:57:20,902 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /core/src/test/java
+2016-05-13 23:57:22,322 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pos/src/main/java
+2016-05-13 23:57:22,323 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /pos/src/test/java
+2016-05-13 23:57:22,608 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social/src/main/java
+2016-05-13 23:57:22,608 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /social/src/test/java
+2016-05-13 23:57:22,856 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /webapi/src/main/java
+2016-05-13 23:57:22,857 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /webapi/src/main/resources
+2016-05-13 23:57:22,862 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /webapi/src/test/java
+2016-05-13 23:57:22,862 [Worker-8] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /webapi/src/test/resources
+2016-05-13 23:57:25,779 [Worker-8] ERROR o.e.m2e.wtp.WTPProjectConfigurator - Unable to configure webapi
+org.eclipse.m2e.wtp.MarkedException: Unable to configure webapi
+	at org.eclipse.m2e.wtp.AbstractProjectConfiguratorDelegate.configureProject(AbstractProjectConfiguratorDelegate.java:98) ~[na:na]
+	at org.eclipse.m2e.wtp.WTPProjectConfigurator.configure(WTPProjectConfigurator.java:71) ~[na:na]
+	at org.eclipse.m2e.core.project.configurator.AbstractLifecycleMapping.configure(AbstractLifecycleMapping.java:120) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$3.call(ProjectConfigurationManager.java:501) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$3.call(ProjectConfigurationManager.java:1) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:494) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.configureNewMavenProjects(ProjectConfigurationManager.java:281) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$1.call(ProjectConfigurationManager.java:168) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$1.call(ProjectConfigurationManager.java:1) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1355) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.importProjects(ProjectConfigurationManager.java:136) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob$1.doCreateMavenProjects(ImportMavenProjectsJob.java:68) [org.eclipse.m2e.core.ui_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:62) [org.eclipse.m2e.core.ui_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.ui.internal.wizards.ImportMavenProjectsJob.runInWorkspace(ImportMavenProjectsJob.java:77) [org.eclipse.m2e.core.ui_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: org.eclipse.core.runtime.CoreException: One or more constraints have not been satisfied.
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProject.modifyInternal(FacetedProject.java:363) ~[na:na]
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProject.mergeChangesInternal(FacetedProject.java:1181) ~[na:na]
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProject.access$2(FacetedProject.java:1117) ~[na:na]
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProject$1.run(FacetedProject.java:324) ~[na:na]
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241) ~[org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.wst.common.project.facet.core.internal.FacetedProject.modify(FacetedProject.java:339) ~[na:na]
+	at org.eclipse.m2e.wtp.WebProjectConfiguratorDelegate.configure(WebProjectConfiguratorDelegate.java:133) ~[na:na]
+	at org.eclipse.m2e.wtp.AbstractProjectConfiguratorDelegate.configureProject(AbstractProjectConfiguratorDelegate.java:94) ~[na:na]
+	... 20 common frames omitted
+2016-05-13 23:57:26,006 [Worker-8] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 4 project(s) in 28 sec
+2016-05-13 23:57:30,759 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:30,760 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-13 23:57:30,765 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:30,765 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-13 23:57:31,519 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:31,519 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-13 23:57:31,524 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:31,524 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-13 23:57:32,767 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:32,767 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-13 23:57:32,770 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:32,771 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-13 23:57:35,935 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:35,950 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-13 23:57:36,037 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:36,038 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-13 23:57:36,043 [Worker-17] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for webapi
+2016-05-13 23:57:36,141 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:57:36,186 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 82 resources
+2016-05-13 23:58:02,670 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-13 23:58:22,008 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,009 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-13 23:58:22,012 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,012 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-13 23:58:22,024 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,024 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-13 23:58:22,027 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,027 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-13 23:58:22,037 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,038 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-13 23:58:22,040 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,041 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-13 23:58:22,059 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,062 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-13 23:58:22,065 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:58:22,065 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-13 23:59:32,207 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:59:32,207 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-13 23:59:32,223 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:59:32,224 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-13 23:59:32,389 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:59:32,391 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-13 23:59:32,396 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-13 23:59:32,397 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:02:01,600 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:02:01,639 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:02:01,658 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:02:01,659 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:02:04,850 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:02:04,853 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:02:04,858 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:02:04,858 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:07:54,700 [Worker-19] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 00:07:56,757 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:07:56,758 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 00:07:56,767 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:07:56,767 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 00:07:58,763 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:07:58,764 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 00:07:58,768 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:07:58,768 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 00:07:59,860 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-14 00:08:03,945 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:08:03,945 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:08:03,948 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:08:03,949 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:08:03,950 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of webapi
+2016-05-14 00:08:03,951 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for webapi
+2016-05-14 00:08:03,962 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:08:03,975 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 82 resources
+2016-05-14 00:08:06,774 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:08:12,242 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:08:12,243 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:08:12,251 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:08:12,252 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-14 00:11:24,979 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:11:24,988 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:11:25,000 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:11:25,001 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:11:33,610 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:11:33,612 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:11:33,620 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:11:33,621 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:13:03,699 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:13:03,701 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:13:03,709 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:13:03,710 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:13:54,632 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:13:54,632 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 00:13:54,641 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:13:54,642 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 00:15:49,051 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:15:49,058 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:15:49,071 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:15:49,072 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:18:11,139 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:18:11,141 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:18:11,175 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:18:11,175 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:18:16,337 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:18:16,338 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:18:16,342 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:18:16,343 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 00:36:19,040 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:36:19,042 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 00:36:19,046 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:36:19,046 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 00:36:19,310 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:36:19,320 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 00:36:19,331 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 00:36:19,331 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 07:34:15,616 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 07:34:21,026 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:21,029 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 07:34:21,038 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:21,038 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 07:34:21,104 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Error contextualizing: org.codehaus.plexus.archiver.jar.JarArchiver@1c0e90a Error retrieving ArchiverManager instance: java.util.NoSuchElementException
+      role: org.codehaus.plexus.archiver.manager.ArchiverManager
+  roleHint: 
+org.codehaus.plexus.context.ContextException: Error retrieving ArchiverManager instance: java.util.NoSuchElementException
+      role: org.codehaus.plexus.archiver.manager.ArchiverManager
+  roleHint: 
+	at org.codehaus.plexus.archiver.AbstractArchiver.contextualize(AbstractArchiver.java:742) ~[plexus-archiver-2.1.jar:na]
+	at org.eclipse.sisu.plexus.PlexusLifecycleManager.contextualize(PlexusLifecycleManager.java:287) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.eclipse.sisu.plexus.PlexusLifecycleManager.activate(PlexusLifecycleManager.java:203) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.eclipse.sisu.bean.BeanScheduler$Pending.activate(BeanScheduler.java:156) [org.eclipse.sisu.inject-0.3.0.jar:na]
+	at org.eclipse.sisu.bean.BeanScheduler$Activator.onProvision(BeanScheduler.java:185) [org.eclipse.sisu.inject-0.3.0.jar:na]
+	at com.google.inject.internal.ProvisionListenerStackCallback$Provision.provision(ProvisionListenerStackCallback.java:126) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProvisionListenerStackCallback.provision(ProvisionListenerStackCallback.java:68) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.ProviderInternalFactory.circularGet(ProviderInternalFactory.java:68) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InternalFactoryToInitializableAdapter.get(InternalFactoryToInitializableAdapter.java:46) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2$1.call(InjectorImpl.java:1009) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl.callInContext(InjectorImpl.java:1059) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.InjectorImpl$2.get(InjectorImpl.java:1005) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at com.google.inject.internal.SingletonScope$1.get(SingletonScope.java:36) [sisu-guice-3.2.5-no_aop.jar:3.2.5]
+	at org.eclipse.sisu.inject.LazyBeanEntry.getValue(LazyBeanEntry.java:81) [org.eclipse.sisu.inject-0.3.0.jar:na]
+	at org.eclipse.sisu.plexus.LazyPlexusBean.getValue(LazyPlexusBean.java:51) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:255) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.apache.maven.plugin.internal.DefaultMavenPluginManager.getConfiguredMojo(DefaultMavenPluginManager.java:546) [maven-core-3.3.3.jar:3.3.3]
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getConfiguredMojo(MavenImpl.java:353) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.reflectManifestGeneration(AbstractMavenArchiverConfigurator.java:438) [org.sonatype.m2e.mavenarchiver_0.17.0.201502101659-signed-20150525172209.jar:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.generateManifest(AbstractMavenArchiverConfigurator.java:394) [org.sonatype.m2e.mavenarchiver_0.17.0.201502101659-signed-20150525172209.jar:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator.mavenProjectChanged(AbstractMavenArchiverConfigurator.java:207) [org.sonatype.m2e.mavenarchiver_0.17.0.201502101659-signed-20150525172209.jar:na]
+	at org.sonatype.m2e.mavenarchiver.internal.AbstractMavenArchiverConfigurator$1.build(AbstractMavenArchiverConfigurator.java:142) [org.sonatype.m2e.mavenarchiver_0.17.0.201502101659-signed-20150525172209.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilderImpl.build(MavenBuilderImpl.java:137) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:172) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$1.method(MavenBuilder.java:1) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1$1.call(MavenBuilder.java:115) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:112) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod$1.call(MavenBuilder.java:105) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:176) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:86) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:200) [org.eclipse.m2e.core_1.6.2.20150902-0002.jar:na]
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.7.0.v20150402-1709.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42) [org.eclipse.equinox.common_3.7.0.v20150402-1709.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235) [org.eclipse.core.resources_3.10.1.v20150725-1910.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55) [org.eclipse.core.jobs_3.7.0.v20150330-2103.jar:na]
+Caused by: org.codehaus.plexus.component.repository.exception.ComponentLookupException: java.util.NoSuchElementException
+      role: org.codehaus.plexus.archiver.manager.ArchiverManager
+  roleHint: 
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:267) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:243) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:237) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	at org.codehaus.plexus.archiver.AbstractArchiver.contextualize(AbstractArchiver.java:738) ~[plexus-archiver-2.1.jar:na]
+	... 46 common frames omitted
+Caused by: java.util.NoSuchElementException: null
+	at java.util.Collections$EmptyIterator.next(Collections.java:4189) ~[na:1.8.0_77]
+	at org.codehaus.plexus.DefaultPlexusContainer.lookup(DefaultPlexusContainer.java:263) [org.eclipse.sisu.plexus-0.3.0.jar:na]
+	... 49 common frames omitted
+2016-05-14 07:34:22,616 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 07:34:25,089 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:25,089 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 07:34:25,093 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:25,093 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 07:34:29,346 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-14 07:34:32,327 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:32,328 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-14 07:34:32,332 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:32,332 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-14 07:34:33,303 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 07:34:33,786 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 07:34:34,266 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-14 07:34:35,225 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-14 07:34:47,861 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:47,861 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 07:34:47,872 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:47,872 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 07:34:48,636 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:48,636 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 07:34:48,639 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:48,639 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 07:34:49,885 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:49,885 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-14 07:34:49,889 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:49,890 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-14 07:34:52,155 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:52,173 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 07:34:52,289 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:52,289 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-14 07:34:52,300 [Worker-2] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for webapi
+2016-05-14 07:34:52,385 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:34:52,404 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 107 resources
+2016-05-14 07:35:24,198 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1921 resources
+2016-05-14 07:37:11,928 [Worker-17] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 07:37:12,671 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:37:12,671 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 07:37:12,674 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:37:12,679 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 07:40:27,406 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:40:27,420 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 07:40:27,430 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:40:27,430 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 07:46:59,239 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:46:59,249 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 07:46:59,255 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:46:59,256 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 07:48:43,424 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:48:43,425 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 07:48:43,433 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 07:48:43,434 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 10:57:48,207 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 10:57:55,505 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:57:55,505 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 10:57:55,521 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:57:55,522 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 10:57:57,850 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 10:57:58,283 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 10:58:00,369 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:00,369 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 10:58:00,372 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:00,372 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 10:58:02,088 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 10:58:02,296 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-14 10:58:05,875 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:05,875 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-14 10:58:05,903 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:05,903 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-14 10:58:08,847 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 10:58:10,126 [Worker-13] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 10:58:11,052 [Worker-9] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-14 10:58:16,807 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:16,839 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 10:58:16,900 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:16,900 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-14 10:58:16,920 [Worker-9] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for webapi
+2016-05-14 10:58:17,053 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:17,122 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 107 resources
+2016-05-14 10:58:17,714 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 10:58:18,093 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 10:58:18,532 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-14 10:58:18,930 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-14 10:58:44,606 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1921 resources
+2016-05-14 10:58:58,360 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:58,360 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 10:58:58,364 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:58,364 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 10:58:58,970 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:58,970 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 10:58:58,972 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:58,972 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 10:58:59,671 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:59,672 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-14 10:58:59,674 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:58:59,675 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-14 10:59:00,965 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:59:00,968 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 10:59:00,971 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 10:59:00,971 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:01:28,500 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:01:28,500 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 11:01:28,505 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:01:28,505 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 11:03:15,618 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:03:15,632 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:03:15,652 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:03:15,652 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:04:01,171 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:04:01,175 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 11:04:01,180 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:04:01,180 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 11:04:32,145 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:04:32,147 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:04:32,162 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:04:32,162 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:05:42,087 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:05:42,087 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 11:05:42,090 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:05:42,091 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 11:05:42,231 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:05:42,235 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:05:42,239 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:05:42,240 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:07:36,979 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:07:36,982 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:07:36,993 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:07:36,993 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:08:43,999 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:08:44,008 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:08:44,021 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:08:44,021 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:10:16,101 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:10:16,103 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:10:16,109 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:10:16,114 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:11:16,011 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:11:16,023 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:11:16,035 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:11:16,036 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:31:27,079 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:31:27,091 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 11:31:27,094 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:31:27,095 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 11:35:53,679 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:35:53,680 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 11:35:53,691 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:35:53,691 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 11:35:53,900 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:35:53,924 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:35:54,038 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:35:54,047 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:36:06,459 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:36:06,460 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 11:36:06,468 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:36:06,469 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 11:37:15,083 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:37:15,086 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:37:15,090 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:37:15,090 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 11:38:22,732 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:38:22,738 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 11:38:22,756 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 11:38:22,759 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 12:30:27,665 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:27,720 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 12:30:27,779 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:27,801 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 12:30:33,995 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:34,001 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 12:30:34,012 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:34,015 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 12:30:39,769 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:39,776 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 12:30:39,791 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:39,792 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 12:30:40,996 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:40,997 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 12:30:41,004 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:30:41,005 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 12:34:55,335 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:34:55,369 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 12:34:55,528 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 12:34:55,533 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 13:25:42,807 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 13:25:47,210 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:25:47,210 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 13:25:47,224 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:25:47,225 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 13:25:49,682 [Worker-6] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 13:25:50,379 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 13:25:51,481 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:25:51,481 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 13:25:51,484 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:25:51,485 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 13:25:52,876 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-14 13:25:54,214 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:25:54,215 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-14 13:25:54,218 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:25:54,219 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-14 13:25:55,682 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 13:25:56,357 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-14 13:26:03,678 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:03,692 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 13:26:03,794 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:03,794 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-14 13:26:03,834 [Worker-2] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for webapi
+2016-05-14 13:26:04,321 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:04,344 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 107 resources
+2016-05-14 13:26:04,876 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-core:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/pom.xml.
+2016-05-14 13:26:05,634 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:pos:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/pom.xml.
+2016-05-14 13:26:05,978 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-social:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/pom.xml.
+2016-05-14 13:26:06,213 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.meruvian.yama:yama-webapi:2.0.0.Beta3-SNAPSHOT @ /home/superwiku/Yamaku/git/yama3/wikuact_2rev/webapi/pom.xml.
+2016-05-14 13:26:30,793 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1921 resources
+2016-05-14 13:26:44,800 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:44,804 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/main/resources
+2016-05-14 13:26:44,815 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:44,815 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/core/src/test/resources
+2016-05-14 13:26:45,489 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:45,489 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 13:26:45,491 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:45,492 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 13:26:46,217 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:46,218 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/main/resources
+2016-05-14 13:26:46,220 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:46,221 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/social/src/test/resources
+2016-05-14 13:26:48,764 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:48,768 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 13:26:48,772 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:26:48,773 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 13:41:13,348 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:41:13,354 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 13:41:13,416 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:41:13,417 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 13:41:53,294 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:41:53,298 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 13:41:53,306 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 13:41:53,308 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 14:18:39,740 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 14:18:39,743 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 14:18:39,752 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 14:18:39,755 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 15:36:06,919 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:36:06,994 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 15:36:07,037 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:36:07,040 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 15:36:11,596 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:36:11,598 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 15:36:11,607 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:36:11,608 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 15:36:29,426 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:36:29,441 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 15:36:29,450 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:36:29,450 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 15:37:11,948 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:37:11,965 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 15:37:11,968 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:37:11,982 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 15:37:12,277 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:37:12,279 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 15:37:12,295 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:37:12,296 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 15:57:30,313 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:57:30,367 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 15:57:30,372 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:57:30,373 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-14 15:58:52,966 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:58:53,084 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-14 15:58:53,151 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 15:58:53,162 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-14 16:06:00,789 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 16:06:00,790 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-14 16:06:00,795 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-14 16:06:00,796 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 00:47:06,045 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:47:06,149 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 00:47:06,196 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:47:06,197 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-15 00:50:56,659 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:50:56,669 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 00:50:56,681 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:50:56,682 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 00:51:26,347 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:51:26,358 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 00:51:26,362 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:51:26,363 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 00:51:30,890 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:51:30,892 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 00:51:30,896 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:51:30,897 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 00:51:44,522 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:51:44,529 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 00:51:44,534 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 00:51:44,535 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 01:07:30,482 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 01:07:30,485 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 01:07:30,510 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 01:07:30,510 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 08:23:45,578 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:23:45,707 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 08:23:45,710 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:23:45,711 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 08:23:51,276 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:23:51,286 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 14 resources
+2016-05-15 08:23:51,450 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:23:51,450 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-05-15 08:25:33,088 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:25:33,089 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 08:25:33,097 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:25:33,097 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 08:26:21,837 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:26:21,838 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 08:26:21,845 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:26:21,845 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 08:26:31,205 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:26:31,208 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 08:26:31,213 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:26:31,213 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 08:26:42,106 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:26:42,107 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 08:26:42,120 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:26:42,121 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 08:27:06,514 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:27:06,514 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 08:27:06,523 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 08:27:06,523 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources
+2016-05-15 09:03:05,339 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:03:05,350 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-15 09:03:05,367 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:03:05,368 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 09:03:29,223 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:03:29,224 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-15 09:03:29,229 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:03:29,229 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 09:03:45,670 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:03:45,670 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-15 09:03:45,682 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:03:45,682 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 09:04:01,244 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:04:01,245 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-15 09:04:01,251 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:04:01,252 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 09:05:36,047 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:05:36,053 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-05-15 09:05:36,073 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:05:36,074 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2016-05-15 09:06:02,386 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:06:02,387 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/main/resources
+2016-05-15 09:06:02,390 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-05-15 09:06:02,390 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/superwiku/Yamaku/git/yama3/wikuact_2rev/pos/src/test/resources

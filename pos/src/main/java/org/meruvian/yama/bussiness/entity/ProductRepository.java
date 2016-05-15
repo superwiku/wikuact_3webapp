@@ -10,6 +10,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductRepository extends DefaultRepository<Product>{
+	
+	Product getById(String id);
+	
 	Product getByBarcode(String barcode);	
 	
 	@Query("Select p from Product p where p.name LIKE %?1% AND p.logInformation.activeFlag = ?2")

@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.meruvian.yama.bussiness.entity.Purchase;
 import org.meruvian.yama.bussiness.entity.PurchaseRepository;
 import org.meruvian.yama.core.LogInformation;
@@ -40,23 +42,29 @@ public class RestPurchaseService implements PurchaseService {
 	@Override
 	@Transactional
 	public Purchase savePurchase(Purchase purchase){
-		return purchaserepository.save(purchase);
+		if (StringUtils.isBlank(purchase.getId())) {
+			purchase.setId(null);
+			purchase.setPurchasedate(new Date());
+			return purchaserepository.save(purchase);
+		}
+		
+		throw new BadRequestException("Id must be empty, use PUT method to update record");
 	}
 	
 	@Override
 	@Transactional
 	public void deletePurchase(String id) {
-		purchaserepository.delete(id);
+		getPurchaseById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);;
 	}
 
 	@Override
-	public Page<Purchase> findPurchaseByPurchasedate(Date purchasedatemin, Date purchasedatemax, Pageable pageable) {
+	public Page<Purchase> findPurchaseByPurchasedate(Date purchasedate, Pageable pageable) {
 		// TODO Auto-generated method stub
-		return purchaserepository.findByPurchasedate(purchasedatemin, purchasedatemax, LogInformation.ACTIVE, pageable);
+		return purchaserepository.findByPurchasedate(purchasedate, LogInformation.ACTIVE, pageable);
 	}
 
 	@Override
-	public Page<Purchase> findPurchaseByTotalpurchase(BigDecimal totalpurchase, Pageable pageable) {
+	public Page<Purchase> findPurchaseByTotalpurchase(BigDecimal totalpurchase,  Pageable pageable) {
 		// TODO Auto-generated method stub
 		return purchaserepository.findByTotalpurchase(totalpurchase, LogInformation.ACTIVE, pageable);
 	}

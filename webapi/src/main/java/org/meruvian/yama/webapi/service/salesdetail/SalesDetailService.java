@@ -15,7 +15,6 @@ import org.meruvian.yama.bussiness.entity.SalesDetail;
 
 @Path("api/pos")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 public interface SalesDetailService {
 	
 	@GET
@@ -24,7 +23,6 @@ public interface SalesDetailService {
 	
 	
 	@POST
-	@OPTIONS
 	SalesDetail saveSalesDetail(SalesDetail salesdetail);
 	
 	@PUT

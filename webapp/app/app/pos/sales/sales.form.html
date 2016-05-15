@@ -1,0 +1,45 @@
+<div class="modal-header">
+	<h3 class="modal-title" translate="pos.sales.label.add"></h3>
+</div>
+<form name="salesForm" ng-submit="ctrl.submit(sales, salesForm)" novalidate validation-schema schema="sales" ng-init="sales = ctrl.sales">
+	<div class="modal-body">
+		<fieldset>
+			<div class="form-group">
+				<label class="control-label" for="barcode" translate="pos.sales.label.barcode"></label>
+				<div class="controls">
+					<input type="text" id="barcode" name="barcode" class="form-control" ng-model="sales.barcode" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="name" translate="pos.sales.label.name"></label>
+				<div class="controls">
+					<input type="text" id="name" name="name" class="form-control" ng-model="sales.name">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="price" translate="pos.sales.label.price"></label>
+				<div class="controls">
+					<input type="text" id="price" name="price" class="form-control" ng-model="sales.price" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="quantity" translate="pos.sales.label.quantity"></label>
+				<div class="controls">
+					<input type="text" id="quantity" name="quantity" class="form-control" ng-model="sales.quantity" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label" for="subtotal" translate="pos.sales.label.subtotal"></label>
+				<div class="controls">
+					<input type="text" id="subtotal" name="subtotal" class="form-control" ng-model="sales.subtotal">
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	<div class="modal-footer">
+		<button type="submit" class="btn btn-primary col-md-3 col-xs-12">
+			<i class="fa fa-save"></i> {{ 'pos.sales.label.save' | translate }}
+		</button>
+		<span class="label label-danger" ng-show="ctrl.error" translate="pos.sales.label.save_error"></span>
+	</div>
+</form>

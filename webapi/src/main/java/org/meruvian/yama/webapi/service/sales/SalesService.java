@@ -16,12 +16,15 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.Sales;
+import org.meruvian.yama.bussiness.entity.SalesDetail;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-@Path("api/pos")
+import com.wordnik.swagger.annotations.Api;
+
+@Path("/api/saless")
+@Api("/sales")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 public interface SalesService {
 	
 	@GET
@@ -29,10 +32,14 @@ public interface SalesService {
 	Sales getSalesById(@PathParam("id")  String id);
 	
 	@GET
-	Page<Sales> findSalesBySalesdate(@QueryParam("salesdate") @DefaultValue("") Date salesdatemin, @QueryParam("salesdate") @DefaultValue("") Date salesdatemax,  Pageable pageable);
+	Page<Sales> findSalesBySalesdate(@QueryParam("salesdate") @DefaultValue("") Date salesdate, Pageable pageable);
+	
+	@GET
+	@Path("/{sales_id}")
+	Page<SalesDetail> findSalesDetailBySales(@PathParam("sales_id") String id, Pageable pageable);
+	
 	
 	@POST
-	@OPTIONS
 	Sales saveSales(Sales sales);
 	
 	@PUT

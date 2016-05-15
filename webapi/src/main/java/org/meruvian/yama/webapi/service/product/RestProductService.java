@@ -3,7 +3,9 @@ package org.meruvian.yama.webapi.service.product;
 import java.math.BigDecimal;
 
 import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.meruvian.yama.bussiness.entity.Product;
 import org.meruvian.yama.bussiness.entity.ProductRepository;
 import org.meruvian.yama.core.LogInformation;
@@ -37,25 +39,36 @@ public class RestProductService implements ProductService{
 	@Override
 	@Transactional
 	public Product updateProduct(Product product) {
-		Product awal = getProductByBarcode(product.getBarcode());
-		if (awal != null) {
+		Product awal = productrepository.findById(product.getId());
 			awal.setName(product.getName());
+			awal.setBarcode(product.getBarcode());
 			awal.setPrice(product.getPrice());
-			}		
-		return awal;
+			return awal;
 	}
 	
 	@Override
 	@Transactional
 	public Product saveProduct(Product product){
-		return productrepository.save(product);
+		if (StringUtils.isBlank(product.getId())) {
+			product.setId(null);
+			product.setName(product.getName());
+			return productrepository.save(product);
+		}
+		
+		throw new BadRequestException("Id must be empty, use PUT method to update record");
 	}
 	
 	@Override
 	@Transactional
 	public void deleteProduct(String id) {
-		productrepository.delete(id);
+		getProductById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);
 	}
 
-	
+	@Override
+	public Product getProductById(String id) {
+		// TODO Auto-generated method stub
+		return productrepository.getById(id);
+	}
+
+		
 }

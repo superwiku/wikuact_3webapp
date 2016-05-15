@@ -8,7 +8,8 @@
 		var ctrl = this;
 		ctrl.date = new Date();
 		ctrl.menus = [
-			{ menu: 'Admin', icon: 'gears', ref: 'app.admin' }
+			{ menu: 'Admin', icon: 'gears', ref: 'app.admin' },
+			{ menu: 'POS' , icon: 'gears' , ref: 'app.pos'}
 		];
 		ctrl.logout = logout;
 

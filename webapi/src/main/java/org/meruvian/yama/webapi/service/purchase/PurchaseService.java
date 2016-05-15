@@ -21,9 +21,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 
-@Path("api/pos")
+@Path("/api/purchases")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+
 public interface PurchaseService {
 	
 	@GET
@@ -31,13 +31,12 @@ public interface PurchaseService {
 	Purchase getPurchaseById(@PathParam("id")  String id);
 	
 	@GET
-	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedate") @DefaultValue("") Date purchasedatemin,@QueryParam("purchasedate") @DefaultValue("") Date purchasedatemax, Pageable pageable);
+	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedate") @DefaultValue("") Date purchasedate, Pageable pageable);
 	
 	@GET
 	Page<Purchase> findPurchaseByTotalpurchase(@QueryParam("totalpurchase") @DefaultValue("") BigDecimal totalpurchase, Pageable pageable);
 	
 	@POST
-	@OPTIONS
 	Purchase savePurchase(Purchase purchase);
 	
 	@PUT

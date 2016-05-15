@@ -15,6 +15,7 @@
 		ctrl.search();
 
 		function onRolesLoaded(roles) {
+
 			ctrl.roles = roles;
 			ctrl.page = roles.meta.number + 1;
 		}

@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import org.meruvian.yama.bussiness.entity.SalesDetail;
 import org.meruvian.yama.bussiness.entity.SalesDetailRepository;
+import org.meruvian.yama.core.LogInformation;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -43,7 +44,7 @@ public class RestSalesDetailService implements SalesDetailService{
 	@Override
 	@Transactional
 	public void deleteSalesDetail(String id) {
-		salesdetailrepository.delete(id);
+		getSalesDetailById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);
 	}
 
 
