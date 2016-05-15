@@ -3,11 +3,31 @@
 
 	angular.module('yamaApp').controller('PosSalesFormCtrl', salesFormController);
 
-	function salesFormController($modalInstance, $validation, changeSecret, sales, RestSalesService) {
+	function salesFormController($modalInstance, $validation, changeSecret, sales, RestSalesService, RestProductService) {
 		// jshint validthis: true
 		var ctrl = this;
 		ctrl.sales = sales;
 		ctrl.submit = submitSales;
+		ctrl.loadProducts = loadProducts;
+		ctrl.loadProduct = loadProduct;
+		ctrl.calculateSubtotal = calculateSubtotal;
+	
+
+		function loadProducts(search) {
+			RestProductService.getList({ q: search }).then(onProductsLoaded);
+
+			function onProductsLoaded(products) {
+				ctrl.products = products;
+			}
+		}
+
+		function loadProduct(product) {
+			ctrl.product = product;
+		}
+
+		function calculateSubtotal (qty) {
+			ctrl.sales.subtotal = qty * ctrl.product.price;
+		}
 
 		function error() {
 			ctrl.error = true;
@@ -27,7 +47,7 @@
 			}
 		}
 
-		
+	
 		function success(sales) {
 			$modalInstance.close(sales);
 		}

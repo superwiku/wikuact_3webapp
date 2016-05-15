@@ -1,0 +1,49 @@
+package org.meruvian.yama.webapi.service.purchasedetail;
+
+import javax.inject.Inject;
+
+import org.meruvian.yama.bussiness.entity.PurchaseDetail;
+import org.meruvian.yama.bussiness.entity.PurchaseDetailRepository;
+import org.meruvian.yama.core.LogInformation;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+
+@Service
+@Transactional(readOnly = true)
+public class RestPurchaseDetailService implements PurchaseDetailService{
+	
+	@Inject
+	private PurchaseDetailRepository purchasedetailrepository;
+	
+	@Override
+	public PurchaseDetail getPurchaseDetailById(String id) {
+		return purchasedetailrepository.getById(id);
+	}
+	
+	@Override
+	@Transactional
+	public PurchaseDetail savePurchaseDetail(PurchaseDetail purchasedetail){
+		return purchasedetailrepository.save(purchasedetail);
+	}
+	
+	@Override
+	@Transactional
+	public void deletePurchaseDetail(String id) {
+		getPurchaseDetailById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);
+	}
+	
+	@Override
+	@Transactional
+	public PurchaseDetail updatePurchaseDetail(PurchaseDetail purchasedetail) {
+		PurchaseDetail awal = getPurchaseDetailById(purchasedetail.getId());
+		if (awal != null) {
+			awal.setQuantity(purchasedetail.getQuantity());
+			awal.setPrice(purchasedetail.getPrice());
+			awal.setSubtotal(purchasedetail.getSubtotal());
+		}
+		
+		return awal;
+	}
+
+}

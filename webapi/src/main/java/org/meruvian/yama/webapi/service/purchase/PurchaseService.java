@@ -31,10 +31,11 @@ public interface PurchaseService {
 	Purchase getPurchaseById(@PathParam("id")  String id);
 	
 	@GET
-	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedate") @DefaultValue("") Date purchasedate, Pageable pageable);
+	@Path("/purchasedate")
+	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedate") @DefaultValue("new Date()") Date purchasedatemin, @QueryParam("purchasedate") @DefaultValue("new Date()") Date purchasedatemax, Pageable pageable);
 	
 	@GET
-	Page<Purchase> findPurchaseByTotalpurchase(@QueryParam("totalpurchase") @DefaultValue("") BigDecimal totalpurchase, Pageable pageable);
+	Page<Purchase> findPurchaseByTotalpurchase(@QueryParam("totalpurchase") @DefaultValue("0") Double totalpurchasemin, @QueryParam("totalpurchase") @DefaultValue("0") Double totalpurchasemax, Pageable pageable);
 	
 	@POST
 	Purchase savePurchase(Purchase purchase);

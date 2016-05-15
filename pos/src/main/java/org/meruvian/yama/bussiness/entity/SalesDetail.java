@@ -17,8 +17,9 @@ public class SalesDetail extends DefaultPersistence{
 	
 	private Sales sales;	
 	private Integer quantity;	
-	private BigDecimal price;	
-	private BigDecimal subtotal;
+	private Double price;	
+	private Double subtotal;
+	private Product product;
 	
 	
 	public Integer getQuantity() {
@@ -29,23 +30,22 @@ public class SalesDetail extends DefaultPersistence{
 		this.quantity = quantity;
 	}
 
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 
-	public BigDecimal getSubTotal() {
+	public Double getSubTotal() {
 		return subtotal;
 	}
 
-	public void setSubTotal(BigDecimal subtotal) {
+	public void setSubTotal(Double subtotal) {
 		this.subtotal = subtotal;
 	}
 
-	@NotNull
 	@ManyToOne
 	@JoinColumn(name="sales_id")
 	public Sales getSales() {
@@ -56,4 +56,15 @@ public class SalesDetail extends DefaultPersistence{
 		this.sales = sales;
 	}
 
+	@ManyToOne
+	@JoinColumn(name="product_id")
+	public Product getProduct() {
+		return product;
+	}
+
+	public void setProduct(Product product) {
+		this.product = product;
+	}
+
+	
 }

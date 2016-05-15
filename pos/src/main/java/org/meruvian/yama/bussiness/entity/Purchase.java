@@ -1,6 +1,5 @@
 package org.meruvian.yama.bussiness.entity;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -11,14 +10,15 @@ import javax.persistence.TemporalType;
 
 import org.meruvian.yama.core.DefaultPersistence;
 
+
+
 @Entity
 @Table(name = "purchase")
 public class Purchase extends DefaultPersistence {
 
 	private Date purchasedate;
-	private BigDecimal totalpurchase;
+	private Double totalpurchase;
 	
-	@Temporal(TemporalType.DATE)
 	public Date getPurchasedate() {
 		return purchasedate;
 	}
@@ -27,12 +27,12 @@ public class Purchase extends DefaultPersistence {
 		this.purchasedate = purchasedate;
 	}
 
-	@Column(name="totalpurchase", nullable=false, precision=18, scale=0)
-	public BigDecimal getTotalpurchase() {
+	@Column(name="totalpurchase")
+	public Double getTotalpurchase() {
 		return totalpurchase;
 	}
 
-	public void setTotalpurchase(BigDecimal totalpurchase) {
+	public void setTotalpurchase(Double totalpurchase) {
 		this.totalpurchase = totalpurchase;
 	}
 

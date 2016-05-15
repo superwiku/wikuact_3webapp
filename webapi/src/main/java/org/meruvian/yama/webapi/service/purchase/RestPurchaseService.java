@@ -58,15 +58,15 @@ public class RestPurchaseService implements PurchaseService {
 	}
 
 	@Override
-	public Page<Purchase> findPurchaseByPurchasedate(Date purchasedate, Pageable pageable) {
+	public Page<Purchase> findPurchaseByPurchasedate(Date purchasedatemin, Date purchasedatemax, Pageable pageable) {
 		// TODO Auto-generated method stub
-		return purchaserepository.findByPurchasedate(purchasedate, LogInformation.ACTIVE, pageable);
+		return purchaserepository.findByPurchasedate(purchasedatemin, purchasedatemax, LogInformation.ACTIVE, pageable);
 	}
 
 	@Override
-	public Page<Purchase> findPurchaseByTotalpurchase(BigDecimal totalpurchase,  Pageable pageable) {
+	public Page<Purchase> findPurchaseByTotalpurchase(Double totalpurchasemin, Double totalpurchasemax,  Pageable pageable) {
 		// TODO Auto-generated method stub
-		return purchaserepository.findByTotalpurchase(totalpurchase, LogInformation.ACTIVE, pageable);
+		return purchaserepository.findByTotalpurchase(totalpurchasemin, totalpurchasemax, LogInformation.ACTIVE, pageable);
 	}
 
 }

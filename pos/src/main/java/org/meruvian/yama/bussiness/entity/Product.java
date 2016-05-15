@@ -13,7 +13,7 @@ public class Product extends DefaultPersistence {
 
 	private String barcode;
 	private String name;
-	private BigDecimal price;
+	private Double price;
 
 	public String getBarcode() {
 		return barcode;
@@ -31,11 +31,11 @@ public class Product extends DefaultPersistence {
 		this.name = name;
 	}
 
-	public BigDecimal getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 

@@ -19,6 +19,6 @@ public interface ProductRepository extends DefaultRepository<Product>{
 	Page<Product> findByName(String name, int activeFlag, Pageable pageable);
 	
 	@Query("Select p from Product p where p.name LIKE %?1% AND p.price = ?2 AND p.logInformation.activeFlag = ?3")
-	Page<Product> findByNameAndPrice(String name, BigDecimal price, int activeFlag, Pageable pageable);
+	Page<Product> findByNameAndPrice(String name, Double price, int activeFlag, Pageable pageable);
 
 }

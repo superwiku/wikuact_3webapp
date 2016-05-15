@@ -1,7 +1,11 @@
 package org.meruvian.yama.webapi.service.purchasedetail;
 
-import javax.inject.Inject;
+import java.util.Date;
 
+import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
+
+import org.apache.commons.lang3.StringUtils;
 import org.meruvian.yama.bussiness.entity.PurchaseDetail;
 import org.meruvian.yama.bussiness.entity.PurchaseDetailRepository;
 import org.meruvian.yama.core.LogInformation;
@@ -24,7 +28,13 @@ public class RestPurchaseDetailService implements PurchaseDetailService{
 	@Override
 	@Transactional
 	public PurchaseDetail savePurchaseDetail(PurchaseDetail purchasedetail){
-		return purchasedetailrepository.save(purchasedetail);
+		if (StringUtils.isBlank(purchasedetail.getId())) {
+			purchasedetail.setId(null);
+			purchasedetail.setPurchase(purchasedetail.getPurchase());
+			return purchasedetailrepository.save(purchasedetail);
+		}
+		
+		throw new BadRequestException("Id must be empty, use PUT method to update record");
 	}
 	
 	@Override

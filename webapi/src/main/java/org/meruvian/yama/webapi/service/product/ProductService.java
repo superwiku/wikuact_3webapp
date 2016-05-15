@@ -36,7 +36,7 @@ public interface ProductService {
 	
 	@GET
 	@Path("/nameprice")
-	Page<Product> findProductByNameAndPrice(@QueryParam("name") @DefaultValue("") String name,@QueryParam("price") @DefaultValue("") BigDecimal price, Pageable pageable);
+	Page<Product> findProductByNameAndPrice(@QueryParam("name") @DefaultValue("") String name,@QueryParam("price") @DefaultValue("") Double price, Pageable pageable);
 	
 	@POST
 	Product saveProduct(Product product);

@@ -5,33 +5,43 @@
 	<div class="modal-body">
 		<fieldset>
 			<div class="form-group">
-				<label class="control-label" for="barcode" translate="pos.sales.label.barcode"></label>
+				<label class="control-label" for="name" translate="pos.sales.label.barcode"></label>
 				<div class="controls">
-					<input type="text" id="barcode" name="barcode" class="form-control" ng-model="sales.barcode" required>
+					<ui-select ng-model="sales.product" id="product" on-select="ctrl.loadProduct($select.selected)">
+						<ui-select-match placeholder="Select product">
+							{{ $select.selected.barcode }}
+						</ui-select-match>
+						<ui-select-choices repeat="product in ctrl.products" refresh="ctrl.loadProducts($select.search)">
+							<div ng-bind-html="product.barcode | highlight: $select.search"></div>
+						</ui-select-choices>
+					</ui-select>
 				</div>
 			</div>
+
 			<div class="form-group">
 				<label class="control-label" for="name" translate="pos.sales.label.name"></label>
 				<div class="controls">
-					<input type="text" id="name" name="name" class="form-control" ng-model="sales.name">
+					<input type="text" id="name" name="name" value="ctrl.product.name" class="form-control" ng-model="ctrl.product.name" required>
+					</tr>
+							
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="price" translate="pos.sales.label.price"></label>
 				<div class="controls">
-					<input type="text" id="price" name="price" class="form-control" ng-model="sales.price" required>
+					<input type="text" id="price" name="price" class="form-control" ng-model="ctrl.product.price" required>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="quantity" translate="pos.sales.label.quantity"></label>
 				<div class="controls">
-					<input type="text" id="quantity" name="quantity" class="form-control" ng-model="sales.quantity" required>
+					<input type="text" id="quantity" name="quantity" class="form-control" ng-model="ctrl.sales.quantity" ng-change="ctrl.calculateSubtotal(ctrl.sales.quantity)" required>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label" for="subtotal" translate="pos.sales.label.subtotal"></label>
 				<div class="controls">
-					<input type="text" id="subtotal" name="subtotal" class="form-control" ng-model="sales.subtotal">
+					<input type="text" id="subtotal" name="subtotal" class="form-control" ng-model="ctrl.sales.subtotal">
 				</div>
 			</div>
 		</fieldset>

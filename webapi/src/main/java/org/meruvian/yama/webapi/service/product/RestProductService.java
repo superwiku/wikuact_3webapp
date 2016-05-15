@@ -27,7 +27,7 @@ public class RestProductService implements ProductService{
 	}
 	
 	@Override
-	public Page<Product> findProductByNameAndPrice(String name, BigDecimal price, Pageable pageable){
+	public Page<Product> findProductByNameAndPrice(String name, Double price, Pageable pageable){
 		return productrepository.findByNameAndPrice(name, price, LogInformation.ACTIVE, pageable);
 	}
 	

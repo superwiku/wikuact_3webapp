@@ -14,7 +14,8 @@ public interface SalesRepository extends DefaultRepository<Sales>{
 	Sales getById(String id);
 	
 	@Query("Select s from Sales s where s.salesdate BETWEEN ?1 AND ?2 AND s.logInformation.activeFlag = ?3")
-	Page<Sales> findBySalesdate(Date salesdate, int activeFlag, Pageable pageable);
+	Page<Sales> findBySalesdate(Date salesdatemin, Date salesdatemax, int activeFlag, Pageable pageable);
 
-	
+	@Query("Select z from Sales z where z.totalsales BETWEEN ?1 AND ?2 AND z.logInformation.activeFlag = ?3")
+	Page<Sales> findByTotalsales(Double totalsalesmin, Double totalsalesmax, int activeFlag, Pageable pageable);
 }

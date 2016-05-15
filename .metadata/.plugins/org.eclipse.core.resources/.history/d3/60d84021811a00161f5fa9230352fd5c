@@ -1,0 +1,57 @@
+package org.meruvian.yama.bussiness.entity;
+
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+import org.meruvian.yama.core.DefaultPersistence;
+
+@Entity
+@Table(name = "purchase_detail")
+public class PurchaseDetail extends DefaultPersistence {
+
+	private Integer quantity;
+	private BigDecimal price;
+	private BigDecimal subtotal;
+	private Purchase purchase;
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
+	public BigDecimal getPrice() {
+		return price;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
+	public BigDecimal getSubtotal() {
+		return subtotal;
+	}
+
+	public void setSubtotal(BigDecimal subtotal) {
+		this.subtotal = subtotal;
+	}
+
+	@ManyToOne
+	@JoinColumn(name="purchase_id")
+	public Purchase getPurchase() {
+		return purchase;
+	}
+
+	public void setPurchase(Purchase purchase) {
+		this.purchase = purchase;
+	}
+
+}

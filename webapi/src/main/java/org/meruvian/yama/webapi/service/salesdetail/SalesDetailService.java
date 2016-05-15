@@ -13,7 +13,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.SalesDetail;
 
-@Path("api/pos")
+@Path("api/salesdetails")
 @Produces(MediaType.APPLICATION_JSON)
 public interface SalesDetailService {
 	

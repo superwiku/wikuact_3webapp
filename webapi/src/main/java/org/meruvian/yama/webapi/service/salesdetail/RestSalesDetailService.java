@@ -1,7 +1,9 @@
 package org.meruvian.yama.webapi.service.salesdetail;
 
 import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.meruvian.yama.bussiness.entity.SalesDetail;
 import org.meruvian.yama.bussiness.entity.SalesDetailRepository;
 import org.meruvian.yama.core.LogInformation;
@@ -25,7 +27,6 @@ public class RestSalesDetailService implements SalesDetailService{
 	public SalesDetail updateSalesDetail(String id, SalesDetail salesdetail) {
 		SalesDetail awal = getSalesDetailById(salesdetail.getId());
 		if (awal != null) {
-			awal.setProduct(salesdetail.getProduct());
 			awal.setQuantity(salesdetail.getQuantity());
 			awal.setPrice(salesdetail.getPrice());
 			awal.setSubTotal(salesdetail.getSubTotal());
@@ -38,7 +39,13 @@ public class RestSalesDetailService implements SalesDetailService{
 	@Override
 	@Transactional
 	public SalesDetail saveSalesDetail(SalesDetail salesdetail){
-		return salesdetailrepository.save(salesdetail);
+		if (StringUtils.isBlank(salesdetail.getId())) {
+			salesdetail.setId(null);
+			salesdetail.setSales(salesdetail.getSales());
+			return salesdetailrepository.save(salesdetail);
+		}
+		
+		throw new BadRequestException("Id must be empty, use PUT method to update record");
 	}
 	
 	@Override

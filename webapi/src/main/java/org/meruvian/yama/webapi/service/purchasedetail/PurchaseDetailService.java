@@ -13,9 +13,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.PurchaseDetail;
 
-@Path("api/pos")
+@Path("api/purchasedetails")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
 public interface PurchaseDetailService {
 	
 	@GET
@@ -24,7 +23,6 @@ public interface PurchaseDetailService {
 	
 	
 	@POST
-	@OPTIONS
 	PurchaseDetail savePurchaseDetail(PurchaseDetail purchasedetail);
 	
 	@PUT
