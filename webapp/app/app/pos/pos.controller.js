@@ -9,7 +9,7 @@
 		ctrl.menus = [
 			{ menu: 'Product', icon: 'user', ref: 'app.pos.product' },
 			{ menu: 'Purchase', icon: 'users', ref: 'app.pos.purchase' },
-			{ menu: 'Sales', icon: 'cube', ref: 'app.pos.sales' }
+			{ menu: 'Sales', icon: 'users', ref: 'app.pos.sales' }
 		];
 		ctrl.state = $state;
 

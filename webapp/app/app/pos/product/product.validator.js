@@ -9,7 +9,7 @@
 		function validate() {
 			validationSchema.set('product', {
 				name: {
-					'validations': 'required, minlength=4',
+					'validations': 'required, minlength=1',
 					'validate-on': 'blur',
 					'messages': {
 						'required': {

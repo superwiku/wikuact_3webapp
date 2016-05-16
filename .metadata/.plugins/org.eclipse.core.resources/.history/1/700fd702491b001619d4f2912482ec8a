@@ -1,0 +1,21 @@
+package org.meruvian.yama.bussiness.entity;
+
+import java.util.Date;
+
+import org.meruvian.yama.core.DefaultRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SalesRepository extends DefaultRepository<Sales>{
+	
+	Sales getById(String id);
+	
+	@Query("Select s from Sales s where s.salesdate BETWEEN ?1 AND ?2 AND s.logInformation.activeFlag = ?3")
+	Page<Sales> findBySalesdate(Date salesdatemin, Date salesdatemax, int activeFlag, Pageable pageable);
+
+	@Query("Select z from Sales z where z.totalsales BETWEEN ?1 AND ?2 AND z.logInformation.activeFlag = ?3")
+	Page<Sales> findByTotalsales(Double totalsalesmin, Double totalsalesmax, int activeFlag, Pageable pageable);
+}

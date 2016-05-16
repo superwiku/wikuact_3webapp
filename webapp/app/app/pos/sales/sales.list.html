@@ -10,7 +10,7 @@
 		<form ng-submit="ctrl.searchParams.page=1;ctrl.search();">
 			<div class="form-group">
 				<button type="button" class="btn btn-primary" ng-click="ctrl.openForm(ctrl.sales)">
-					<span class="fa fa-plus"></span> {{ 'pos.sales.label.add' | translate }}
+					<span class="fa fa-plus"></span> {{ 'pos.sales.label.addsales' | translate }}
 				</button>
 			</div>
 			<hr>
@@ -36,16 +36,20 @@
 							<table class="table">
 								<thead>
 									<tr>
+										<th translate="pos.sales.label.timecode"></th>
 										<th translate="pos.sales.label.salesdate"></th>
 										<th translate="pos.sales.label.totalsales"></th>
-										<th translate="pos.sales.label.description"></th>										
+										<th translate="pos.sales.label.description"></th>
 										<th translate="pos.sales.label.action"></th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr ng-repeat="sales in ctrl.saless">
-										<td><a href="" ng-click="ctrl.openForm(sales)"><span ng-bind="sales.name"></a></span></td>
-										<td ng-bind="sales.description"></td>
+										<td><a href="" ng-click="ctrl.openForm(sales)"><span ng-bind="sales.salesdate"></a></span>
+										</td>
+										<td class="col-md-4">{{sales.salesdate | date :"dd-MM-yyyy  HH-mm-ss"}}</td>
+										<td ng-bind="sales.totalsales"></td>
+										<td></td>
 										<td>
 											<a href="" class="btn btn-danger btn-xs" ng-click="ctrl.remove(sales)" title="{{ 'pos.sales.label.delete' | translate }}">
 												<span class="fa fa-trash"></span>

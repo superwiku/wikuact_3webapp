@@ -1,0 +1,5 @@
+package org.meruvian.yama.webapi.interceptor;
+
+public class ResteasyServletContext {
+
+}

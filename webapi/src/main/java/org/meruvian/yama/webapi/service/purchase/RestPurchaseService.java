@@ -1,6 +1,5 @@
 package org.meruvian.yama.webapi.service.purchase;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.inject.Inject;
@@ -54,12 +53,14 @@ public class RestPurchaseService implements PurchaseService {
 	@Override
 	@Transactional
 	public void deletePurchase(String id) {
-		getPurchaseById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);;
+		getPurchaseById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);
 	}
 
 	@Override
 	public Page<Purchase> findPurchaseByPurchasedate(Date purchasedatemin, Date purchasedatemax, Pageable pageable) {
 		// TODO Auto-generated method stub
+		if (purchasedatemin == null) purchasedatemin = new Date();
+		if (purchasedatemax == null) purchasedatemax = new Date();
 		return purchaserepository.findByPurchasedate(purchasedatemin, purchasedatemax, LogInformation.ACTIVE, pageable);
 	}
 

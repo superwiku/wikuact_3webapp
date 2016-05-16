@@ -1,7 +1,5 @@
 package org.meruvian.yama.webapi.service.product;
 
-import java.math.BigDecimal;
-
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
@@ -17,36 +15,47 @@ import org.meruvian.yama.bussiness.entity.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.wordnik.swagger.annotations.Api;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @Path("/api/products")
-@Api("/product")
+@Api("/products")
 @Produces(MediaType.APPLICATION_JSON)
 public interface ProductService {
 	@GET
 	@Path("/{id}")
+	@ApiOperation(httpMethod = "GET", value = "Get Product By Id ", response = Product.class)
 	Product getProductById(@PathParam("id")  String id);
 	
 	@GET
 	@Path("/barcode")
+	@ApiOperation(httpMethod = "GET", value = "Get Product By Barcode", response = Product.class, 
+				  responseContainer = "Page")
 	Product getProductByBarcode(@QueryParam("barcode")  String barcode);
 	
 	@GET
+	@ApiOperation(httpMethod = "GET", value = "Find Product By Name", response = Product.class,
+					responseContainer = "Page")
 	Page<Product> findProductByName(@QueryParam("name") @DefaultValue("") String name, Pageable pageable);
 	
 	@GET
 	@Path("/nameprice")
+	@ApiOperation(httpMethod = "GET", value = "Find Product By Name And Price", response = Product.class,	
+					responseContainer = "Page")
 	Page<Product> findProductByNameAndPrice(@QueryParam("name") @DefaultValue("") String name,@QueryParam("price") @DefaultValue("") Double price, Pageable pageable);
 	
 	@POST
+	@ApiOperation(httpMethod = "POST", value = "Post Product", response = Product.class)
 	Product saveProduct(Product product);
 	
 	@PUT
 	@Path("/{id}")
+	@ApiOperation(httpMethod = "PUT", value = "Put Product By Id", response = Product.class )
 	Product updateProduct(Product product);
 	
 	@DELETE
 	@Path("/{id}")
+	@ApiOperation(httpMethod = "DELETE", value = "Delete Product By Id")
 	void deleteProduct(@PathParam("Id")  String Id);
 
 }

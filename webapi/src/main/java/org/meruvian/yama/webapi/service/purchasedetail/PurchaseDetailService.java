@@ -13,24 +13,32 @@ import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.PurchaseDetail;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @Path("api/purchasedetails")
+@Api("/purchasedetails")
 @Produces(MediaType.APPLICATION_JSON)
 public interface PurchaseDetailService {
 	
 	@GET
-	@Path("/{id}")
+	@Path("/{id}") 
+	@ApiOperation(httpMethod = "GET", value = "Get PurchaseDetail By Id", response = PurchaseDetail.class)
 	PurchaseDetail getPurchaseDetailById(@PathParam("id")  String id);
 	
 	
 	@POST
+	@ApiOperation(httpMethod = "POST", value = "Post PurchaseDetail", response = PurchaseDetail.class)
 	PurchaseDetail savePurchaseDetail(PurchaseDetail purchasedetail);
 	
 	@PUT
 	@Path("/{id}")
+	@ApiOperation(httpMethod = "PUT", value = "Put PurchaseDetail By Id", response = PurchaseDetail.class)
 	PurchaseDetail updatePurchaseDetail(PurchaseDetail purchasedetail);
 	
 	@DELETE
 	@Path("/{id}")
+	@ApiOperation(httpMethod = "DELETE", value = "Delete PurchaseDetail By Id")
 	void deletePurchaseDetail(@PathParam("id")  String id);
 
 }

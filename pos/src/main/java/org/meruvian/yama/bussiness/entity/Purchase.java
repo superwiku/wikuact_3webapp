@@ -10,8 +10,6 @@ import javax.persistence.TemporalType;
 
 import org.meruvian.yama.core.DefaultPersistence;
 
-
-
 @Entity
 @Table(name = "purchase")
 public class Purchase extends DefaultPersistence {
@@ -27,7 +25,6 @@ public class Purchase extends DefaultPersistence {
 		this.purchasedate = purchasedate;
 	}
 
-	@Column(name="totalpurchase")
 	public Double getTotalpurchase() {
 		return totalpurchase;
 	}

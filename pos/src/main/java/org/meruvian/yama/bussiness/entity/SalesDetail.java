@@ -11,10 +11,9 @@ import javax.validation.constraints.NotNull;
 import org.meruvian.yama.core.DefaultPersistence;
 
 @Entity
-@Table(name="sales_detail")
+@Table(name = "sales_detail")
 public class SalesDetail extends DefaultPersistence{
-	
-	
+		
 	private Sales sales;	
 	private Integer quantity;	
 	private Double price;	

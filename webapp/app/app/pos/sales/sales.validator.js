@@ -8,8 +8,8 @@
 
 		function validate() {
 			validationSchema.set('sales', {
-				quantity: {
-					'validations': 'required, minlength=4',
+				name: {
+					'validations': 'required, minlength=1',
 					'validate-on': 'blur',
 					'messages': {
 						'required': {

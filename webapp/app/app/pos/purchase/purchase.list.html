@@ -36,6 +36,7 @@
 							<table class="table">
 								<thead>
 									<tr>
+										<th translate="pos.purchase.label.timecode"></th>
 										<th translate="pos.purchase.label.purchasedate"></th>
 										<th translate="pos.purchase.label.totalpurchase"></th>
 										<th translate="pos.purchase.label.description"></th>
@@ -44,8 +45,10 @@
 								</thead>
 								<tbody>
 									<tr ng-repeat="purchase in ctrl.purchases">
-										<td><a href="" ng-click="ctrl.openForm(purchase)"><span ng-bind="purchase.name"></a></span></td>
-										<td ng-bind="purchase.description"></td>
+										<td><a href="" ng-click="ctrl.openForm(purchase)"><span ng-bind="purchase.purchasedate"></a></span></td>
+										<td class="col-md-4">{{purchase.purchasedate | date :"dd-MM-yyyy H-mm-ss"}}</td>
+										<td ng-bind="purchase.totalpurchase"></td>
+										<td></td>
 										<td>
 											<a href="" class="btn btn-danger btn-xs" ng-click="ctrl.remove(purchase)" title="{{ 'pos.purchase.label.delete' | translate }}">
 												<span class="fa fa-trash"></span>

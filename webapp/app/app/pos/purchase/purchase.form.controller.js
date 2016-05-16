@@ -41,6 +41,7 @@
 
 				if (purchase.id) {
 					purchase.put().then(success, error);
+
 				} else {
 					RestPurchaseService.post(purchase).then(success, error);
 				}

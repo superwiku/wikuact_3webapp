@@ -10,7 +10,7 @@
 		ctrl.submit = submitSales;
 		ctrl.loadProducts = loadProducts;
 		ctrl.loadProduct = loadProduct;
-		ctrl.calculateSubtotal = calculateSubtotal;
+		ctrl.calculateTotalsales = calculateTotalsales;
 	
 
 		function loadProducts(search) {
@@ -25,8 +25,8 @@
 			ctrl.product = product;
 		}
 
-		function calculateSubtotal (qty) {
-			ctrl.sales.subtotal = qty * ctrl.product.price;
+		function calculateTotalsales (qty) {
+			ctrl.sales.totalsales = qty * ctrl.product.price;
 		}
 
 		function error() {
@@ -41,6 +41,7 @@
 
 				if (sales.id) {
 					sales.put().then(success, error);
+
 				} else {
 					RestSalesService.post(sales).then(success, error);
 				}

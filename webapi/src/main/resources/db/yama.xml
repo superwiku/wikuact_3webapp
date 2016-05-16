@@ -8,4 +8,5 @@
 	<include file="migration/0002_alter_social_connection_column_length.xml" relativeToChangelogFile="true"/>
 	<include file="migration/0003_create_sales_salesdetail_product_purchase_purchasedetail.xml" relativeToChangelogFile="true"/>
 	<include file="migration/0004_add_foreign_key_product_id.xml" relativeToChangelogFile="true"/>
+	<include file="migration/0005_alter_type_date_into_datetime.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>

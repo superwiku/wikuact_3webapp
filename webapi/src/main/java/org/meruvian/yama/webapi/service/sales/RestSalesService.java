@@ -6,10 +6,7 @@ import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
 
 import org.apache.commons.lang3.StringUtils;
-import org.meruvian.yama.bussiness.entity.Purchase;
 import org.meruvian.yama.bussiness.entity.Sales;
-import org.meruvian.yama.bussiness.entity.SalesDetail;
-import org.meruvian.yama.bussiness.entity.SalesDetailRepository;
 import org.meruvian.yama.bussiness.entity.SalesRepository;
 import org.meruvian.yama.core.LogInformation;
 import org.springframework.data.domain.Page;
@@ -23,22 +20,18 @@ public class RestSalesService implements SalesService{
 	@Inject
 	private SalesRepository salesrepository;
 	
-	@Inject
-	private SalesDetailRepository salesdetailrepository;
-	
 	@Override
 	public Sales getSalesById(String id) {
-		return salesrepository.getById(id);
+		return salesrepository.findById(id);
 	}
 	
 	@Override
 	@Transactional
-	public Sales updateSales(String id, Sales sales) {
+	public Sales updateSales(Sales sales) {
 		Sales awal = getSalesById(sales.getId());
 		if (awal != null) {
-			awal.setSalesdate(new Date());
+			awal.setSalesdate(sales.getSalesdate());
 			awal.setTotalsales(sales.getTotalsales());
-			return salesrepository.save(awal);
 		}
 		
 		return awal;
@@ -59,25 +52,26 @@ public class RestSalesService implements SalesService{
 	@Override
 	@Transactional
 	public void deleteSales(String id) {
-		getSalesById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);;
+		getSalesById(id).getLogInformation().setActiveFlag(LogInformation.INACTIVE);
 	}
 
 	@Override
 	public Page<Sales> findSalesBySalesdate(Date salesdatemin, Date salesdatemax, Pageable pageable) {
-		// TODO Auto-generated method stub
-		return salesrepository.findBySalesdate(salesdatemin, salesdatemax,  LogInformation.ACTIVE, pageable);
+		if(salesdatemin == null) salesdatemin=new Date();
+		if(salesdatemax == null) salesdatemax=new Date();
+		return salesrepository.findBySalesdatespan(salesdatemin, salesdatemax,  LogInformation.ACTIVE, pageable);
 	}
 
 	@Override
-	public Page<SalesDetail> findSalesDetailBySales(String id, Pageable pageable) {
+	public Page<Sales> findSalesByTotalsales(Double totalsalesmin, Double totalsalesmax, Pageable pageable) {
 		// TODO Auto-generated method stub
-		return salesdetailrepository.findBySalesId(id, LogInformation.ACTIVE, pageable);
+		return salesrepository.findByTotalsalesspan(totalsalesmin, totalsalesmax, LogInformation.ACTIVE, pageable);
 	}
-	
+
 	@Override
-	public Page<Sales> findSalesByTotalsales(Double totalsalesmin, Double totalsalesmax,  Pageable pageable) {
+	public Page<Sales> findSalesByTotalsales(Double totalsales , Pageable pageable) {
 		// TODO Auto-generated method stub
-		return salesrepository.findByTotalsales(totalsalesmin, totalsalesmax, LogInformation.ACTIVE, pageable);
+		return salesrepository.findByTotalsales(totalsales , LogInformation.ACTIVE , pageable);
 	}
 
 }
