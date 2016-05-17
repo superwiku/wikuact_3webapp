@@ -11,7 +11,10 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.meruvian.yama.bussiness.entity.Purchase;
 import org.meruvian.yama.bussiness.entity.PurchaseDetail;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -40,5 +43,7 @@ public interface PurchaseDetailService {
 	@Path("/{id}")
 	@ApiOperation(httpMethod = "DELETE", value = "Delete PurchaseDetail By Id")
 	void deletePurchaseDetail(@PathParam("id")  String id);
-
+	
+	
+	
 }

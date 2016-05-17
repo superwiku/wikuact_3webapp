@@ -8,6 +8,7 @@ import io.swagger.models.Info;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class SwaggerConfig {
 	@Bean
 	public BeanConfig beanConfig() {
@@ -19,7 +20,7 @@ public class SwaggerConfig {
 		config.setVersion("0.0.1-SNAPSHOT");
 		config.setTitle("yama-pos");
 		config.setInfo(info);
-	    config.setResourcePackage("org.meruvian.yama.pos");
+	    config.setResourcePackage("org.meruvian.yama.webapi");
 		config.setScan(true);		
 		return config;
 	}

@@ -1,12 +1,17 @@
 package org.meruvian.yama.webapi.service.purchase;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.meruvian.yama.bussiness.entity.Product;
+import org.meruvian.yama.bussiness.entity.ProductRepository;
 import org.meruvian.yama.bussiness.entity.Purchase;
+import org.meruvian.yama.bussiness.entity.PurchaseDetail;
+import org.meruvian.yama.bussiness.entity.PurchaseDetailRepository;
 import org.meruvian.yama.bussiness.entity.PurchaseRepository;
 import org.meruvian.yama.core.LogInformation;
 import org.springframework.data.domain.Page;
@@ -19,6 +24,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class RestPurchaseService implements PurchaseService {
 	@Inject
 	private PurchaseRepository purchaserepository;
+	@Inject
+	private PurchaseDetailRepository purchasedetailrepository;
+	@Inject
+	private ProductRepository productrepository;
 	
 	@Override
 	public Purchase getPurchaseById(String id) {
@@ -40,14 +49,24 @@ public class RestPurchaseService implements PurchaseService {
 	
 	@Override
 	@Transactional
-	public Purchase savePurchase(Purchase purchase){
-		if (StringUtils.isBlank(purchase.getId())) {
-			purchase.setId(null);
-			purchase.setPurchasedate(new Date());
-			return purchaserepository.save(purchase);
+	public Purchase savePurchase(List<PurchaseDetail> purchaseDetails){
+		Purchase purchase = new Purchase();
+		purchase.setPurchasedate(new Date());
+		purchase.setTotalpurchase(0D);
+		
+		purchase = purchaserepository.save(purchase);
+		
+		for (PurchaseDetail p : purchaseDetails) {
+			Product product = productrepository.findById(p.getProduct().getId());
+			p.setPurchase(purchase);
+			p.setPrice(product.getPrice());
+			p.setSubtotal(p.getPrice() * p.getQuantity());
+			purchase.setTotalpurchase(purchase.getTotalpurchase() + p.getSubtotal());
+			
+			purchasedetailrepository.save(p);
 		}
 		
-		throw new BadRequestException("Id must be empty, use PUT method to update record");
+		return purchase;
 	}
 	
 	@Override
@@ -69,5 +88,13 @@ public class RestPurchaseService implements PurchaseService {
 		// TODO Auto-generated method stub
 		return purchaserepository.findByTotalpurchase(totalpurchasemin, totalpurchasemax, LogInformation.ACTIVE, pageable);
 	}
+	
+	@Override
+	public Page<PurchaseDetail> getPurchaseDetailByPurchase(String id, Pageable pageable){
+		// TODO Auto-generated method stub
+		return purchasedetailrepository.findByPurchaseId(id, LogInformation.ACTIVE, pageable);
+	}
 
+
+	
 }

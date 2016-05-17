@@ -160,7 +160,7 @@
         "delete": "Delete {{ name }}",
         "delete_confirm": "Are you sure want to delete this data?",
         "done": "Done",
-        "save": "Save",
+        "report": "Purchase Report",
         "save_error": "Ops, something went wrong!",
         "search": "Search",
         "total_entries": "Found {{ total }} roles",

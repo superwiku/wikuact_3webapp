@@ -1,6 +1,8 @@
 package org.meruvian.yama.webapi.service.purchase;
 
 import java.util.Date;
+import java.util.List;
+
 import javax.ws.rs.DELETE;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
@@ -14,6 +16,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.meruvian.yama.bussiness.entity.Product;
 import org.meruvian.yama.bussiness.entity.Purchase;
+import org.meruvian.yama.bussiness.entity.PurchaseDetail;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -35,16 +38,16 @@ public interface PurchaseService {
 	@Path("/purchasedate")
 	@ApiOperation(httpMethod = "GET", value = "Find Purchase By Purchase Date", response = Purchase.class,
 					responseContainer = "Page")
-	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedate") Date purchasedatemin, @QueryParam("purchasedate") @DefaultValue("new Date()") Date purchasedatemax, Pageable pageable);
+	Page<Purchase> findPurchaseByPurchasedate(@QueryParam("purchasedatemin") Date purchasedatemin, @QueryParam("purchasedatemax") Date purchasedatemax, Pageable pageable);
 	
 	@GET
 	@ApiOperation(httpMethod = "GET", value = "Find Purchase By Total Purchase", response = Purchase.class,
 					responseContainer = "Page")
-	Page<Purchase> findPurchaseByTotalpurchase(@QueryParam("totalpurchase") @DefaultValue("0") Double totalpurchasemin, @QueryParam("totalpurchase") @DefaultValue("0") Double totalpurchasemax, Pageable pageable);
+	Page<Purchase> findPurchaseByTotalpurchase(@QueryParam("totalpurchasemin") Double totalpurchasemin, @QueryParam("totalpurchasemax") Double totalpurchasemax, Pageable pageable);
 	
 	@POST
 	@ApiOperation(httpMethod = "POST", value = "Post Purchase", response = Purchase.class)
-	Purchase savePurchase(Purchase purchase);
+	Purchase savePurchase(List<PurchaseDetail> purchaseDetails);
 	
 	@PUT
 	@Path("/{id}")
@@ -55,6 +58,12 @@ public interface PurchaseService {
 	@Path("/{id}")
 	@ApiOperation(httpMethod = "DELETE", value = "Delete Purchase By Id")
 	void deletePurchase(@PathParam("id")  String id);
+	
+	@GET
+	@Path("/{id}/details") 
+	@ApiOperation(httpMethod = "GET", value = "Get PurchaseDetail By Purchase", response = PurchaseDetail.class)
+	Page<PurchaseDetail> getPurchaseDetailByPurchase(@PathParam("id") String id, Pageable pageable);
+	
 			
 	
 }

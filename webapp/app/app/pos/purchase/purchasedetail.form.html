@@ -1,0 +1,58 @@
+<div class="modal-header">
+	<h3 class="modal-title" translate="pos.purchase.label.report"></h3>
+</div>
+
+<div class="modal-body">
+	<form>
+		<fieldset>
+			<div class="form-group">
+				<label class="control-label" for="name" translate="pos.purchase.label.timecode"></label>
+				<div class="controls">
+					<input type="text" id="name" name="name"  class="form-control" ng-model="ctrl.purchase.purchasedate" readonly>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label" for="name" translate="pos.purchase.label.purchasedate"></label>
+				<div class="controls">
+					<input type="text" id="name" name="name"  class="form-control" ng-model="ctrl.purchase.purchasedate | date :'dd-MM-yyyy  HH-mm-ss'" readonly>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label" for="name" translate="pos.purchase.label.totalpurchase"></label>
+				<div class="controls">
+					<input type="text" id="name" name="name"  class="form-control" ng-model="ctrl.purchase.totalpurchase"  readonly>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+	
+	<div class="row">
+		<div class="col-xs-12 table-responsive">
+			<table class="table">
+				<tr>
+					<th translate="pos.purchase.label.barcode"></th>
+					<th translate="pos.purchase.label.name"></th>
+					<th translate="pos.purchase.label.price"></th>
+					<th translate="pos.purchase.label.quantity"></th>
+					<th translate="pos.purchase.label.totalpurchase"></th>
+				</tr>
+				<tr ng-repeat="d in ctrl.purchase.details">
+					<td ng-bind="d.product.barcode"></td>
+					<td ng-bind="d.product.name"></td>
+					<td ng-bind="d.product.price"></td>
+					<td ng-bind="d.quantity"></td>
+					<td ng-bind="d.subtotal"></td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	
+</div>
+
+
+
+

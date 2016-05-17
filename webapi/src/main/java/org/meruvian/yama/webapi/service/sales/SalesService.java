@@ -19,6 +19,7 @@ import org.springframework.data.domain.Pageable;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 
 @Path("/api/saless")
 @Api("/saless")
@@ -29,21 +30,21 @@ public interface SalesService {
 	@GET
 	@Path("/{id}")
 	@ApiOperation(httpMethod = "GET", value = "Get Sales By Id", response = Sales.class)
-	Sales getSalesById(@PathParam("id")  String id);
+	Sales getSalesById(@PathParam("id") @ApiParam  String id);
 	
 	@GET
-	@ApiOperation(httpMethod = "GET", value = "Find Sales By Totalsales", response = Sales.class, responseContainer = "Page")
+	@ApiOperation(httpMethod = "GET", value = "Find Sales By Totalsales One", response = Sales.class, responseContainer = "Page")
 	Page<Sales> findSalesByTotalsales(@QueryParam("totalsales") @DefaultValue("0") Double totalsales , Pageable pageable);
 	
 	@GET
 	@Path("/salesdate")
-	@ApiOperation(httpMethod = "GET", value = "Find Sales By Salesdate", response = Sales.class, responseContainer = "Page")
-	Page<Sales> findSalesBySalesdate(@QueryParam("salesdate") @DefaultValue("new Date()") Date salesdatemin, @QueryParam("salesdate") @DefaultValue("new Date()") Date salesdatemax, Pageable pageable);
+	@ApiOperation(httpMethod = "GET", value = "Find Sales By Salesdate Span", response = Sales.class, responseContainer = "Page")
+	Page<Sales> findSalesBySalesdate(@QueryParam("salesdatemin") Date salesdatemin, @QueryParam("salesdatemax") Date salesdatemax, Pageable pageable);
 	
 	@GET
 	@Path("/totalsales")
-	@ApiOperation(httpMethod = "GET", value = "Find Sales By Totalsales", response = Sales.class, responseContainer = "Page")
-	Page<Sales> findSalesByTotalsales(@QueryParam("totalsales") @DefaultValue("0") Double totalsalesmin, @QueryParam("totalsales") @DefaultValue("0") Double totalsalesmax, Pageable pageable);
+	@ApiOperation(httpMethod = "GET", value = "Find Sales By Totalsales Span", response = Sales.class, responseContainer = "Page")
+	Page<Sales> findSalesByTotalsales(@QueryParam("totalsalesmin") Double totalsalesmin, @QueryParam("totalsalesmax")  Double totalsalesmax, Pageable pageable);
 	
 	@POST
 	@ApiOperation(httpMethod = "POST", value = "Post Sales", response = Sales.class)	

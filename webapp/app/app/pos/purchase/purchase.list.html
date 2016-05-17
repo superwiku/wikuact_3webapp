@@ -45,8 +45,12 @@
 								</thead>
 								<tbody>
 									<tr ng-repeat="purchase in ctrl.purchases">
-										<td><a href="" ng-click="ctrl.openForm(purchase)"><span ng-bind="purchase.purchasedate"></a></span></td>
-										<td class="col-md-4">{{purchase.purchasedate | date :"dd-MM-yyyy H-mm-ss"}}</td>
+										<td>
+											<a href="" ng-click="ctrl.openPurchaseDetailForm(purchase)">
+												<span ng-bind="purchase.purchasedate"></span>
+											</a>
+										</td>
+										<td class="col-md-4">{{purchase.purchasedate | date :"dd-MM-yyyy  HH-mm-ss"}}</td>
 										<td ng-bind="purchase.totalpurchase"></td>
 										<td></td>
 										<td>

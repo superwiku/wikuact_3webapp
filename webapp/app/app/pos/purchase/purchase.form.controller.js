@@ -6,12 +6,30 @@
 	function purchaseFormController($modalInstance, $validation, changeSecret, purchase, RestPurchaseService, RestProductService) {
 		// jshint validthis: true
 		var ctrl = this;
-		ctrl.purchase = purchase;
+		ctrl.purchase = purchase || {};
+		ctrl.purchase.purchaseDetails = [];
+		ctrl.purchaseDetail = {};
 		ctrl.submit = submitPurchase;
 		ctrl.loadProducts = loadProducts;
 		ctrl.loadProduct = loadProduct;
 		ctrl.calculateTotalpurchase = calculateTotalpurchase;
-	
+		ctrl.addPurchaseDetail = addPurchaseDetail;
+
+
+		function addPurchaseDetail(product, form) {
+			$validation.validate(form).success(add);
+
+			function add() {
+				var purchaseDetail = {};
+				purchaseDetail.product = product;
+				purchaseDetail.subtotal = calculateTotalpurchase(product.quantity, product.price);
+				purchaseDetail.quantity = product.quantity;
+
+				ctrl.purchase.purchaseDetails.push(purchaseDetail);
+				ctrl.product = {};
+				ctrl.total = calculateTotal(ctrl.purchase.purchaseDetails);
+			}
+		}
 
 		function loadProducts(search) {
 			RestProductService.getList({ q: search }).then(onProductsLoaded);
@@ -25,26 +43,34 @@
 			ctrl.product = product;
 		}
 
-		function calculateTotalpurchase (qty) {
-			ctrl.purchase.totalpurchase = qty * ctrl.product.price;
+		function calculateTotalpurchase (qty, price) {
+			return Number(qty) * Number(price);
+		}
+
+		function calculateTotal(purchaseDetails) {
+			var total = 0;
+
+			for (var d in purchaseDetails) {
+				d = purchaseDetails[d];
+
+				total += Number(d.subtotal);
+			}
+
+			return total;
 		}
 
 		function error() {
 			ctrl.error = true;
 		}
 
-		function submitPurchase(purchase, form) {
-			$validation.validate(form).success(submit);
+		function submitPurchase(purchase) {
+			ctrl.error = false;
 
-			function submit() {
-				ctrl.error = false;
+			if (purchase.id) {
+				purchase.put().then(success, error);
 
-				if (purchase.id) {
-					purchase.put().then(success, error);
-
-				} else {
-					RestPurchaseService.post(purchase).then(success, error);
-				}
+			} else {
+				RestPurchaseService.post(purchase.purchaseDetails).then(success, error);
 			}
 		}
 

@@ -6,6 +6,7 @@
 	function purchaseListController($location, $modal, angularPopupBoxes, RestPurchaseService) {
 		// jshint validthis: true
 		var ctrl = this;
+		ctrl.openPurchaseDetailForm = openPurchaseDetailForm;
 		ctrl.openForm = openPurchaseForm;
 		ctrl.page = 1;
 		ctrl.remove = removePurchase;
@@ -19,11 +20,30 @@
 			ctrl.page = purchases.meta.number + 1;
 		}
 
+		function openPurchaseDetailForm(purchase, changeSecret) {
+			var modal = $modal.open({
+				templateUrl: 'app/pos/purchase/purchasedetail.form.html',
+				controller: 'PosPurchaseDetailFormCtrl as ctrl',
+				size: 'lg',
+				resolve: {
+					purchase: function() { return purchase; }
+					
+				}
+			});
+															
+			modal.result.then(success);
+
+			function success(result) {
+				ctrl.searchParams.q = result.name;
+				ctrl.search();
+			}
+		}
+
 		function openPurchaseForm(purchase, changeSecret) {
 			var modal = $modal.open({
 				templateUrl: 'app/pos/purchase/purchase.form.html',
 				controller: 'PosPurchaseFormCtrl as ctrl',
-				size: 'md',
+				size: 'lg',
 				resolve: {
 					purchase: function() { return purchase; },
 					changeSecret: function() { return changeSecret; }
