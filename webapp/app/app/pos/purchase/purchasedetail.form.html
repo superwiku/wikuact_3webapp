@@ -11,7 +11,7 @@
 					<input type="text" id="name" name="name"  class="form-control" ng-model="ctrl.purchase.purchasedate" readonly>
 				</div>
 			</div>
-			
+
 			<div class="form-group">
 				<label class="control-label" for="name" translate="pos.purchase.label.purchasedate"></label>
 				<div class="controls">
@@ -19,12 +19,7 @@
 				</div>
 			</div>
 
-			<div class="form-group">
-				<label class="control-label" for="name" translate="pos.purchase.label.totalpurchase"></label>
-				<div class="controls">
-					<input type="text" id="name" name="name"  class="form-control" ng-model="ctrl.purchase.totalpurchase"  readonly>
-				</div>
-			</div>
+			
 
 		</fieldset>
 	</form>
@@ -37,7 +32,7 @@
 					<th translate="pos.purchase.label.name"></th>
 					<th translate="pos.purchase.label.price"></th>
 					<th translate="pos.purchase.label.quantity"></th>
-					<th translate="pos.purchase.label.totalpurchase"></th>
+					<th translate="pos.purchase.label.subtotal"></th>
 				</tr>
 				<tr ng-repeat="d in ctrl.purchase.details">
 					<td ng-bind="d.product.barcode"></td>
@@ -50,7 +45,19 @@
 			</table>
 		</div>
 	</div>
+	<div class="form-group">
+				<label class="control-label" for="name" translate="pos.purchase.label.totalpurchase"></label>
+				<div class="controls">
+					<input type="text" id="name" name="name"  class="form-control" ng-model="ctrl.purchase.totalpurchase"  readonly>
+				</div>
+	</div>
 	
+</div>
+<div class="modal-footer">
+	<button type="submit" class="btn btn-primary col-md-3 col-xs-12" ng-click="ctrl.submit(ctrl.purchase)">
+		<i class="fa fa-save"></i> {{ 'pos.purchase.label.print' | translate }}
+	</button>
+	<span class="label label-danger" ng-show="ctrl.error" translate="pos.purchase.label.save_error"></span>
 </div>
 
 

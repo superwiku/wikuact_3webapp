@@ -50,12 +50,12 @@ public interface PurchaseService {
 	Purchase savePurchase(List<PurchaseDetail> purchaseDetails);
 	
 	@PUT
-	@Path("/{id}/put")
+	@Path("/{id}")
 	@ApiOperation(httpMethod = "PUT", value = "Put Purchase By Id", response = Purchase.class)
 	Purchase updatePurchase(Purchase purchase);
 	
 	@DELETE
-	@Path("/{id}/delete")
+	@Path("/{id}")
 	@ApiOperation(httpMethod = "DELETE", value = "Delete Purchase By Id")
 	void deletePurchase(@PathParam("id")  String id);
 	

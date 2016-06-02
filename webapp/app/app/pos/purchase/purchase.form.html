@@ -14,8 +14,8 @@
 								<ui-select-match placeholder="Select product">
 									{{ $select.selected.barcode }}
 								</ui-select-match>
-								<ui-select-choices repeat="product in ctrl.products" refresh="ctrl.loadProducts($select.search)">
-									<div ng-bind-html="product.barcode | highlight: $select.search"></div>
+								<ui-select-choices repeat="product.barcode as product in ctrl.products" refresh="ctrl.loadProducts($select.search)">
+									<div ng-bind-html="product.barcode | highlight:$select.search"></div>
 								</ui-select-choices>
 							</ui-select>
 						</div>

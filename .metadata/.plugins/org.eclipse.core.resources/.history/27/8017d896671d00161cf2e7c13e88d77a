@@ -26,7 +26,7 @@ public interface ProductService {
 	@GET
 	@Path("/{id}")
 	@ApiOperation(httpMethod = "GET", value = "Get Product By Id ", response = Product.class)
-	Product getProductById(@PathParam("id")  String id);
+	Product getProductById(@PathParam("id")@ApiParam()  String id);
 	
 	@GET
 	@Path("/barcode")
@@ -57,6 +57,6 @@ public interface ProductService {
 	@DELETE
 	@Path("/{id}")
 	@ApiOperation(httpMethod = "DELETE", value = "Delete Product By Id")
-	void deleteProduct(@PathParam("id") @ApiParam()  String Id);
+	void deleteProduct(@PathParam("Id") @ApiParam()  String Id);
 
 }

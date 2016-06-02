@@ -33,8 +33,9 @@
 
 		function loadProducts(search) {
 			RestProductService.getList({ q: search }).then(onProductsLoaded);
+		
 
-			function onProductsLoaded(products) {
+		function onProductsLoaded(products) {
 				ctrl.products = products;
 			}
 		}

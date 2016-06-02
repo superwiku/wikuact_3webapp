@@ -143,6 +143,9 @@
         "roles": "Roles",
         "username": "Username",
         "add": "add product"
+      },
+      "validation": {
+        "name_required": "product name cannot blank"
       }
     },
     "purchase": {
@@ -156,18 +159,23 @@
         "subtotal": "Sub Total",
         "action": "Action",
         "add": "Add Purchase",
-        "addpurchase": "Addpurchase",
+        "addpurchase": "Add Purchase",
+        "save": "SAVE", 
         "delete": "Delete {{ name }}",
         "delete_confirm": "Are you sure want to delete this data?",
         "done": "Done",
-        "report": "Purchase Report",
+        "report": "Purchase Order",
         "save_error": "Ops, something went wrong!",
         "search": "Search",
         "total_entries": "Found {{ total }} roles",
-        "timecode": "Time Code",
+        "timecode": "Purchase Code",
         "purchasedate": "Purchase Date",
         "totalpurchase": "Total Purchase",
-        "description": "Description"
+        "description": "Description",
+        "print": "Print Version"
+      },
+      "validation": {
+        "name_required": "product name not found"
       }
     },
     "sales": {
